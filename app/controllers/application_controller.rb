@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   #   flash[:alert] = "You are not authorized to perform this action."
   #   redirect_to(root_path)
   # end
-
+#devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   private
 
   def skip_pundit?

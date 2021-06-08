@@ -1,4 +1,4 @@
-class BookingPolicy < ApplicationPolicy
+class SlotPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -8,15 +8,12 @@ class BookingPolicy < ApplicationPolicy
       true
     end
 
-    def show
+
+    def destroy
       record.user == user
     end
 
     def update
-      record.user == user
-    end
-
-    def destroy
       record.user == user
     end
   end
