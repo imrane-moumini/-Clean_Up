@@ -4,7 +4,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
     <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :address %>
+    <%= f.input :degree %>
+    <%= f.input :years_of_experience %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
