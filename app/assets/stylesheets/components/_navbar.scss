@@ -1,12 +1,30 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: relative;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  width: 375px;
+  height: 812px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-link img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin-top: 55px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
+h1, .h1 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: Roboto;
+    color: #5E616F;
+
+}
+
+
