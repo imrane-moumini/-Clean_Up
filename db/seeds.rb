@@ -1,10 +1,12 @@
 
 require "open-uri"
-
-User.destroy_all
-Slot.destroy_all
-Booking.destroy_all
 Review.destroy_all
+Booking.destroy_all
+Slot.destroy_all
+User.destroy_all
+
+
+
 
 puts "begin users"
 
