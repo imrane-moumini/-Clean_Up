@@ -5,19 +5,19 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    day = params[:day]
+    ville = params[:ville]
     start_query = params[:start_time]
     end_query = params[:end_time]
-    if day.present? && start_query.present? && end_query.present?
-      @slots = Slot.where(day: day)
+    if ville.present? && start_query.present? && end_query.present?
+      @slots = Slot.joins(:user).where("address ILIKE ?", "%#{params[:ville]}%")
       @slots.select do |slot|
         slot.start_time <= start_query && slot.end_time >= end_query
       end
-      raise
       @available_slots = @slots.select do |slot|
         slot.available?(start_query, end_query)
-        @available_slot_one = @available_slot.sample
-      end
+        end
+        @available_slot_one = @available_slots.sample
+
     else
       @bookings = Booking.all
     end
