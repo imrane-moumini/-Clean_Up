@@ -1,2 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+ <div class="booking-form">
+     <%= form_tag dashboard_path, method: :get do %>
+              <%= date_field_tag :day,
+              class: "form-group",
+              placeholder: "day" %>
+               <%= time_field_tag :start_time,
+              class: "form-group",
+              placeholder: "start_time" %>
+               <%= time_field_tag :end_time,
+              class: "form-group",
+              placeholder: "end_time" %>
+              <%= submit_tag "Rechercher", class: "btn btn-flat" %>
+            <% end %>
+</div>
