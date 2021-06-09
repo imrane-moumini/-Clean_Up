@@ -46,18 +46,23 @@ puts "end users"
 
 puts "begin slot"
 
+start = DateTime.now
+puts start
+slot1 = Slot.new(user_id: user1.id)
+slot1.start_time = start
+slot1.end_time = start + 2.hours
+slot1.save!
+puts slot1.start_time
 
-slot1 = Slot.create!(user_id: user1.id, day: Date.parse("2021-6-22"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+#slot2 = Slot.create!(user_id: user2.id, day: Date.parse("2021-6-21"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot2 = Slot.create!(user_id: user2.id, day: Date.parse("2021-6-21"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+#slot3 = Slot.create!(user_id: user3.id, day: Date.parse("2021-6-20"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot3 = Slot.create!(user_id: user3.id, day: Date.parse("2021-6-20"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+#slot4 = Slot.create!(user_id: user4.id, day: Date.parse("2021-6-24"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
 
-slot4 = Slot.create!(user_id: user4.id, day: Date.parse("2021-6-24"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+#slot5 = Slot.create!(user_id: user5.id, day: Date.parse("2021-6-25"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
 
-slot5 = Slot.create!(user_id: user5.id, day: Date.parse("2021-6-25"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
-
-slot6 = Slot.create!(user_id: user6.id, day: Date.parse("2021-6-23"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+#slot6 = Slot.create!(user_id: user6.id, day: Date.parse("2021-6-23"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
 
 puts "end slot"
 
@@ -65,15 +70,15 @@ puts "begin booking"
 
 booking1 = Booking.create!(user_id: user1.id, slot_id: slot1.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
 
-booking2 = Booking.create!(user_id: user2.id, slot_id: slot2.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
+#booking2 = Booking.create!(user_id: user2.id, slot_id: slot2.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
 
-booking3 = Booking.create!(user_id: user3.id, slot_id: slot3.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
+#booking3 = Booking.create!(user_id: user3.id, slot_id: slot3.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
 
-booking4 = Booking.create!(user_id: user4.id, slot_id: slot4.id, start_time: Time.parse("09:00:00"), end_time: Time.parse("11:00:00"), status: true)
+#booking4 = Booking.create!(user_id: user4.id, slot_id: slot4.id, start_time: Time.parse("09:00:00"), end_time: Time.parse("11:00:00"), status: true)
 
-booking5 = Booking.create!(user_id: user5.id, slot_id: slot5.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
+#booking5 = Booking.create!(user_id: user5.id, slot_id: slot5.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
 
-booking6 = Booking.create!(user_id: user6.id, slot_id: slot6.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
+#booking6 = Booking.create!(user_id: user6.id, slot_id: slot6.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
 
 puts "end booking"
 
@@ -81,15 +86,15 @@ puts "begin review"
 
 review1 = Review.create!(content: "Alizée a fait du super travail, merci encore!", rating: 4, user_id: user1.id)
 
-review2 = Review.create!(content: "Margaux m'a bien dépanné sur ce coup là, super taff!", rating: 5, user_id: user2.id)
+#review2 = Review.create!(content: "Margaux m'a bien dépanné sur ce coup là, super taff!", rating: 5, user_id: user2.id)
 
-review3 = Review.create!(content: "Encore un peu de poussière mais le gros du travail a été fait merci Imrane", rating: 2, user_id: user3.id)
+#review3 = Review.create!(content: "Encore un peu de poussière mais le gros du travail a été fait merci Imrane", rating: 2, user_id: user3.id)
 
-review4 = Review.create!(content: "Très sympathique et efficace", rating: 3, user_id: user4.id)
+#review4 = Review.create!(content: "Très sympathique et efficace", rating: 3, user_id: user4.id)
 
-review5 = Review.create!(content: "Bonne communication mais pas très efficace", rating: 2, user_id: user5.id)
+#review5 = Review.create!(content: "Bonne communication mais pas très efficace", rating: 2, user_id: user5.id)
 
-review6 = Review.create!(content: "Jean a remis mon salon en super état après une grosse soirée, merci!", rating: 4, user_id: user6.id)
+#review6 = Review.create!(content: "Jean a remis mon salon en super état après une grosse soirée, merci!", rating: 4, user_id: user6.id)
 
 
 puts "end review"

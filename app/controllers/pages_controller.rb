@@ -6,17 +6,16 @@ class PagesController < ApplicationController
 
   def dashboard
     day = params[:day]
-    start_time = params[:start_time]
-    end_time = params[:end_time]
-    if day.present? && start_time.present? && end_time.present?
+    start_query = params[:start_time]
+    end_query = params[:end_time]
+    if day.present? && start_query.present? && end_query.present?
       @slots = Slot.where(day: day)
       @slots.select do |slot|
-        slot.start_time <= start_time && slot.end_time >= end_time
+        slot.start_time <= start_query && slot.end_time >= end_query
       end
-
+      raise
       @available_slots = @slots.select do |slot|
-        raise
-        slot.available?(start_time, end_time)
+        slot.available?(start_query, end_query)
         @available_slot_one = @available_slot.sample
       end
     else
