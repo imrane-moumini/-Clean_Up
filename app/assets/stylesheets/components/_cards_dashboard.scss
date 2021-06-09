@@ -1,0 +1,78 @@
+.card-dash {
+  overflow: hidden;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: #F2F3F4;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.card-dash .green {
+  width: 90px;
+  height: 80px;
+  background: #15D39C;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    h3 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 20px;
+      color: #FFFFFF;
+    }
+}
+
+.card-dash .gray {
+  width: 90px;
+  height: 80px;
+  background: #5E616F;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    h3 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 20px;
+      color: #FFFFFF;
+    }
+}
+
+.card-dash .avatar-carre-small {
+  position: absolute;
+  left: 250px;
+}
+
+.card-dash h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5E616F;
+  margin-bottom: 4px;
+}
+
+.card-dash p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #5E616F;
+  margin-bottom: 0;
+}
+
+.card-dash .card-dash-infos {
+  padding-left: 20px;
+}
