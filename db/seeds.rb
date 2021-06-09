@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 require "open-uri"
 
 User.destroy_all
@@ -39,6 +33,8 @@ file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419
 user5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user5.save
 
+
+
 user6 = User.create!(first_name: "Jean", last_name: "Loup", email: "jean.loup@gmail.com", password: "password6", address: "4 rue du Village 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 2)
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -47,6 +43,7 @@ user6.save
 puts "end users"
 
 puts "begin slot"
+
 
 slot1 = Slot.create!(user_id: user1.id, day: Date.parse("2021-6-22"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
