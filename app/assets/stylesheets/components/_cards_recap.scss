@@ -1,0 +1,46 @@
+.cards-recap{
+  height: 80px;
+  background: #F2F3F4;
+  border: 1px solid #E9EBED;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card-dash-infos img {
+  object-fit: cover;
+}
+
+.cards-recap-infos {
+  margin-left: 20px;
+}
+
+.cards-recap h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5E616F;
+}
+
+.cards-recap p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #B4B4BA;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding-top: 3px;
+  color: #B4B4BA;
+}
