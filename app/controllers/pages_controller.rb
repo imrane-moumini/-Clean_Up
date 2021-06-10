@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
+   @bookings = policy_scope(Booking)
   end
 end
