@@ -3,9 +3,9 @@ class ReviewPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def create
+    def create?
       true
     end
-  end
 end

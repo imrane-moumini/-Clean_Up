@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_06_09_153921) do
 
   # These are extensions that must be enabled in order to support this database
@@ -42,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_06_09_153921) do
     t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "task_accomplished"
+    t.integer "booking_price"
     t.datetime "start_time"
     t.datetime "end_time"
     t.index ["slot_id"], name: "index_bookings_on_slot_id"
@@ -80,6 +83,9 @@ ActiveRecord::Schema.define(version: 2021_06_09_153921) do
     t.string "degree"
     t.integer "years_of_experience"
     t.boolean "cleaner"
+    t.text "description"
+    t.integer "number_of_reviews"
+    t.integer "user_price"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
