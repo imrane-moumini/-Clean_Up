@@ -21,4 +21,8 @@ class BookingPolicy < ApplicationPolicy
     def destroy?
       record.user == user
     end
+
+    def recap?
+      show?
+    end
 end

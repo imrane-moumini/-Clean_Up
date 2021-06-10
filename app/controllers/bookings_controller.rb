@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
   def new
-    authorize @bookings
 
     #@dashboard = Dashboard.find(params[:dashboard_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def show
@@ -13,10 +13,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    authorize @bookings
+
 
     @booking = Booking.new(booking_params)
-    #@dashboard = Dashboard.find(params[:dashboard_id])
+    authorize @booking
     @booking.user = current_user
     #@booking.dashboard = @dashboard
       if @booking.save
@@ -27,16 +27,22 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    authorize @bookings
+    authorize @booking
 
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to home_path(@home), notice: 'This booking was successfully destroyed.'
+    redirect_to dashboard_path, notice: 'This booking was successfully destroyed.'
+  end
+
+  def recap
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @review = Review.new
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_time, :status, :end_time)
+    params.require(:booking).permit(:start_time, :status, :end_time, :booking_price, :task_accomplished)
   end
 end
