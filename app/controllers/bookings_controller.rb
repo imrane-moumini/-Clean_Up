@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
   def new
-    authorize @bookings
 
     #@dashboard = Dashboard.find(params[:dashboard_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def show

@@ -1,1 +1,35 @@
-<%= @available_slot_one.user.first_name %>
+<div class= "top-title">
+  <p>Réservations</p>
+</div>
+
+<div class="container">
+
+<% @bookings.each do |booking| %>
+<% if booking.task_accomplished == true %>
+    <div class="card-dash">
+      <div class= "green">
+        <h3><%= booking.start_time.strftime("%b")%>  <br> <%= booking.start_time.strftime("%d")%>  </h3>
+      </div>
+      <div class="card-dash-infos-green">
+        <h2> <%= current_user.first_name%> <%= current_user.last_name%></h2>
+        <p>De <%= booking.start_time.strftime("%H:00") %> à <%= booking.end_time.strftime("%H:00") %> <br> <%= current_user.address %></p>
+      </div>
+      <%= cl_image_tag current_user.photo.key, class: "avatar-carre-small" %>
+    </div>
+  <% end %>
+<% end %>
+
+<% @bookings.each do |booking| %>
+<% if booking.task_accomplished == false %>
+    <div class="card-dash">
+      <div class= "gray">
+        <h3><%= booking.start_time.strftime("%b")%>  <br> <%= booking.start_time.strftime("%d")%>  </h3>
+      </div>
+      <div class="card-dash-infos">
+        <h2> <%= current_user.first_name%> <%= current_user.last_name%></h2>
+        <p>De <%= booking.start_time.strftime("%H:00") %> à <%= booking.end_time.strftime("%H:00") %> <br> <%= current_user.address %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>
