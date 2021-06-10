@@ -21,6 +21,13 @@ class BookingsController < ApplicationController
     end
 
     @available_slot_one = @available_slots.sample
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    #@dashboard = dashboard.new
+  end
 
   def create
 
