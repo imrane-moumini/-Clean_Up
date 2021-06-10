@@ -4,7 +4,6 @@ class Slot < ApplicationRecord
 
   validates :start_time, presence: true
   validates :end_time, presence: true
-  validates :day, presence: true
 
   def available?(start_time, end_time)
     asked_hours_free = self.bookings.all? do |booking|
