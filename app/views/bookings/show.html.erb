@@ -1,2 +1,19 @@
 
+   <!-- <button type='button' class='btn btn-flat' data-toggle='modal'>-->
+    <%= link_to 'Suuprimer mon booking', dashboard_path, id: 'btn-return_dashboard'  %>
+    <!--</button>-->
+<div class="top-title">
+  <p>Récapitulatif</p>
+</div>
+
+<div class=“cards-recap”>
+  <img class=“avatar-carre” alt=“avatar-carre” src=“https://kitt.lewagon.com/placeholder/users/cveneziani” />
+  <div class=“cards-recap-infos”>
+    <h2><%= current_user.first_name %></h2>
+      <div class=“rating”>
+        <i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><p> 56 avis </p>
+      </div>
+  </div>
+</div>
+
 
