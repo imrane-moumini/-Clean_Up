@@ -1,0 +1,26 @@
+.card-img{
+  filter: blur(4px);
+  width: 375px;
+  height: 268px;
+}
+
+.titleh3 {
+  padding-top: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: #5E616F;
+  text-decoration: none;
+}
+
+.flex{
+  position: relative;
+}
+
+.avatar-large{
+  position: absolute;
+  left: 120px;
+  top: 80px;
+}

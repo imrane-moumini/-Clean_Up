@@ -1,1 +1,60 @@
-new.html.erb
+
+
+<div class="flex">
+  <%= cl_image_tag current_user.photo.key, class: "card-img" %>
+  <%= cl_image_tag current_user.photo.key, class: "avatar-large" %>
+</div>
+
+<div class="container">
+
+  <div class="cards-infos">
+    <div class="cards-infos-left">
+      <div class="rating-infos">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> 56 avis </p>
+      </div>
+      <h2><%=current_user.first_name%></h2>
+      <div class="cards-infos-address">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><%=current_user.address%></p>
+      </div>
+    </div>
+  <h3>10€/h</h3>
+  </div>
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Expériences</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Avis</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="bloc-description">
+        <p>Salut moi c’est Thierry j’adore la propreté à bientot. se en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il </p>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="bloc-experience">
+        <h3>Qualification</h3>
+      <p> <%= current_user.degree %> </p>
+    </div>
+
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+    </div>
+  </div>
+
+  <div class="container-center">
+    <div class="btn-green">
+      <p>ACCEPTER</p>
+    </div>
+      <%= link_to 'REFUSER', root_path, class: "titleh3"  %>
+  </div>
+
+
+
+</div>
+
