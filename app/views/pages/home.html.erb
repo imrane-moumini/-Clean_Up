@@ -1,16 +1,1 @@
 
-
- <div class="booking-form">
-     <%= form_tag dashboard_path, method: :get do %>
-               <%= text_field_tag :ville,
-              class: "form-group",
-              placeholder: "ville" %>
-               <%= datetime_field_tag :start_time,
-              class: "form-group",
-              placeholder: "start_time" %>
-               <%= datetime_field_tag :end_time,
-              class: "form-group",
-              placeholder: "end_time" %>
-              <%= submit_tag "Rechercher", class: "btn btn-flat" %>
-            <% end %>
-
