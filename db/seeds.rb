@@ -33,6 +33,8 @@ file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419
 user5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user5.save
 
+
+
 user6 = User.create!(first_name: "Jean", last_name: "Loup", email: "jean.loup@gmail.com", password: "password6", address: "4 rue du Village 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 2)
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -42,17 +44,18 @@ puts "end users"
 
 puts "begin slot"
 
-slot1 = Slot.create!(user_id: user1.id, date: Date.iso8601("2021-6-22"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot2 = Slot.create!(user_id: user2.id, date: Date.iso8601("2021-6-21"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+slot1 = Slot.create!(user_id: user1.id, day: Date.parse("2021-6-22"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot3 = Slot.create!(user_id: user3.id, date: Date.iso8601("2021-6-20"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+slot2 = Slot.create!(user_id: user2.id, day: Date.parse("2021-6-21"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot4 = Slot.create!(user_id: user4.id, date: Date.iso8601("2021-6-24"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot3 = Slot.create!(user_id: user3.id, day: Date.parse("2021-6-20"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot5 = Slot.create!(user_id: user5.id, date: Date.iso8601("2021-6-25"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot4 = Slot.create!(user_id: user4.id, day: Date.parse("2021-6-24"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
 
-slot6 = Slot.create!(user_id: user6.id, date: Date.iso8601("2021-6-23"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot5 = Slot.create!(user_id: user5.id, day: Date.parse("2021-6-25"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+
+slot6 = Slot.create!(user_id: user6.id, day: Date.parse("2021-6-23"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
 
 puts "end slot"
 
