@@ -1,16 +1,27 @@
+<head>
+  <div class="fond-vert">
+    <%= image_tag "head.png", alt: "perso" , class: "img-perso"%>
+  </div>
+<head/>
 
 
- <div class="booking-form">
-     <%= form_tag dashboard_path, method: :get do %>
-               <%= text_field_tag :ville,
+<body>
+  <div class="booking-form">
+    <%= form_tag dashboard_path, method: :get do %>
+              <%= text_field_tag :ville,
               class: "form-group",
-              placeholder: "ville" %>
+              placeholder: "Ma ville" %>
+    
                <%= datetime_field_tag :start_time,
               class: "form-group",
               placeholder: "start_time" %>
                <%= datetime_field_tag :end_time,
               class: "form-group",
               placeholder: "end_time" %>
-              <%= submit_tag "Rechercher", class: "btn btn-flat" %>
+              <%= submit_tag "TROUVER", class: "btn btn-flat-find" %>
             <% end %>
+  </div>
+<body/>
+
+
 
