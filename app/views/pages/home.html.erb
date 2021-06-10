@@ -7,11 +7,11 @@
 
 <body>
   <div class="booking-form">
-    <%= form_tag dashboard_path, method: :get do %>
+    <%= form_tag new_booking_path, method: :get do %>
               <%= text_field_tag :ville,
               class: "form-group",
               placeholder: "Ma ville" %>
-    
+
                <%= datetime_field_tag :start_time,
               class: "form-group",
               placeholder: "start_time" %>
