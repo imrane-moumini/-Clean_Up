@@ -1,0 +1,58 @@
+.cards-infos{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    h3{
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #15D39C;
+      margin-bottom: 0;
+    }
+}
+
+.cards-infos-address{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.cards-infos-address p {
+  margin-bottom: 0;
+  padding: 8px;
+  padding-bottom: 0;
+}
+
+.cards-infos-left h2{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 23px;
+  color: #5E616F;
+  margin-top: 8px;
+}
+
+.cards-infos-left p{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #5E616F;
+}
+
+.rating-infos {
+  display: flex;
+}
+
+.rating-infos p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding-top: 3px;
+  color: #B4B4BA;
+}

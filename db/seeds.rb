@@ -5,7 +5,6 @@ Booking.destroy_all
 Slot.destroy_all
 User.destroy_all
 
-
 puts "begin users"
 
 user1 = User.create!(first_name: "Alizée", last_name: "Juan", email: "alizeemelanie@gmail.com", password: "password", address: "187 rue Paradis 13006 Marseille", degree: "CAP agent de propreté et d'hygiène", years_of_experience: 5, description: "Bonjour je m'appelle Alyzée, je suis à votre disposition, compétente et motivée!", number_of_reviews: 56, user_price: 10)
@@ -13,7 +12,9 @@ file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419
 user1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user1.save
 
+
 user2 = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Lille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2, description: "Bonjour je m'appelle Margaux, je suis à votre disposition, compétente et motivée!", number_of_reviews: 50, user_price: 10)
+
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user2.save
@@ -22,6 +23,7 @@ user3 = User.create!(first_name: "Imrane", last_name: "Moumini", email: "ImraneM
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user3.save
+
 
 user4 = User.create!(first_name: "Selma", last_name: "Benmeradi", email: "selma.benmeradi@gmail.com", password: "password4", address: "20 rue Bel Air 13006 Amiens", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 1, description: "Bonjour je m'appelle Selma, je suis à votre disposition, compétente et motivée!", number_of_reviews: 60, user_price: 10)
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
@@ -65,6 +67,7 @@ puts "end slot"
 
 puts "begin booking"
 
+
 booking1 = Booking.create!(user_id: user1.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: true, booking_price: user1.user_price)
 
 booking2 = Booking.create!(user_id: user2.id, slot_id: slot2.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: user2.user_price)
@@ -76,6 +79,7 @@ booking4 = Booking.create!(user_id: user4.id, slot_id: slot4.id, start_time: sta
 booking5 = Booking.create!(user_id: user5.id, slot_id: slot5.id, start_time: start, end_time: start + 4.hours, status: true, task_accomplished: true, booking_price: user5.user_price)
 
 booking6 = Booking.create!(user_id: user6.id, slot_id: slot6.id, start_time: start, end_time: start + 4.hours, status: true, task_accomplished: false, booking_price: user6.user_price)
+
 
 puts "end booking"
 
