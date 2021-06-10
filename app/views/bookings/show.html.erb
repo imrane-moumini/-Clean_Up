@@ -1,13 +1,66 @@
+
 <div class="top-title">
   <p>Récapitulatif</p>
 </div>
 
-<div class=“cards-recap”>
-  <img class=“avatar-carre” alt=“avatar-carre” src=“https://kitt.lewagon.com/placeholder/users/cveneziani” />
-  <div class=“cards-recap-infos”>
+<div class="container">
+
+<div class="cards-recap">
+  <img class="avatar-carre" alt="avatar-carre" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+  <div class="cards-recap-infos">
     <h2><%= current_user.first_name %></h2>
-      <div class=“rating”>
-        <i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><p> 56 avis </p>
+      <div class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> 56 avis </p>
       </div>
   </div>
 </div>
+
+<div class="adresse-title">
+  <p>Adresse</p>
+</div>
+
+<div class="champ-big-gray">
+  <p><%=current_user.address%></p>
+</div>
+
+<div class="date-title">
+  <p>Date</p>
+</div>
+
+<div class="champ-big-gray">
+  <p><%= @booking.start_time.strftime("%Y %B %d")%></p>
+</div>
+
+  <div class="date-title">
+    <p>Heure de début</p>
+  </div>
+<div class="container-flex">
+  <div class="champ-small">
+    <p><%= @booking.start_time.strftime("%H:00") %></p>
+  </div>
+  <div class="champ-small">
+    <p><%= @booking.end_time.strftime("%H:00") %></p>
+  </div>
+</div>
+
+
+  <div class="cards-price">
+    <div class="cards-price-flex">
+      <p>Prestation - 2h </p>
+      <p>20€</p>
+    </div>
+    <div class="cards-price-flex">
+      <p>Frais </p>
+      <p>2,50€</p>
+    </div>
+    <div class="ligne w-100"></div>
+    <div class="cards-price-flex">
+      <h3>Total</h3>
+      <h3>22,50€</h3>
+    </div>
+  </div>
+<div class="container-center">
+    <%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>
+      <%= link_to 'Modifier', root_path, class: "titleh3"  %>
+  </div>
+
