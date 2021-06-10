@@ -3,10 +3,10 @@
   background-color: transparent;
   position: relative;
   width: 375px;
+  z-index:1000;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
   width: 375px;
   height: 812px;
   background-color: white;
