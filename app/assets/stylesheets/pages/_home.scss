@@ -1,1 +1,49 @@
 
+
+.img-perso {
+  width: 375px;
+  height: 252px;
+  margin-left: 0px;
+  top: 54px;
+}
+.booking-form {
+margin-top: 20px;
+text-align: center;
+}
+.booking-form .form-group {
+
+  width: 150px;
+  height: 55px;
+  background: #FFFFFF;
+  border: 1px solid #E9EBED;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+}
+form>input {
+ font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5E616F;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.btn-flat-find {
+  width: 246px;
+  height: 66px;
+  background: #15D39C;
+  border-radius: 50px;
+  color:white;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding: 20px;
+  font-family: Roboto;
+  font-weight: bold;
+}
