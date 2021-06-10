@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  def new
+  def new?
     authorize @bookings
   end
 
