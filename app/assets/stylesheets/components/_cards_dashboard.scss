@@ -26,6 +26,7 @@
       font-size: 17px;
       line-height: 20px;
       color: #FFFFFF;
+      text-align: center;
     }
 }
 
@@ -45,6 +46,7 @@
       font-size: 17px;
       line-height: 20px;
       color: #FFFFFF;
+      text-align: center;
     }
 }
 
@@ -73,6 +75,11 @@
   margin-bottom: 0;
 }
 
-.card-dash .card-dash-infos {
+.card-dash .card-dash-infos-green {
   padding-left: 20px;
+  width: 120px;
+}
+
+.card-dash .card-dash-infos{
+    padding-left: 20px;
 }

@@ -1,5 +1,4 @@
 
-
 <% if @available_slots.empty? %>
   <p>Personnne de dispo déso</p>
   <%= link_to "Refaire une recherche", root_path  %>
@@ -15,11 +14,6 @@
 <% end %>
 
 
-
-
-
-
-
 <div class="flex">
   <%= cl_image_tag current_user.photo.key, class: "card-img" %>
   <%= cl_image_tag current_user.photo.key, class: "avatar-large" %>
@@ -30,7 +24,7 @@
   <div class="cards-infos">
     <div class="cards-infos-left">
       <div class="rating-infos">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> 56 avis </p>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> <%=current_user.number_of_reviews%> avis </p>
       </div>
       <h2><%=current_user.first_name%></h2>
       <div class="cards-infos-address">
@@ -38,7 +32,7 @@
         <p><%=current_user.address%></p>
       </div>
     </div>
-  <h3>10€/h</h3>
+  <h3> <%=current_user.user_price%>€/h</h3>
   </div>
 
   <nav>
@@ -51,21 +45,25 @@
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <div class="bloc-description">
-        <p>Salut moi c’est Thierry j’adore la propreté à bientot. se en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il </p>
+        <p> <%= current_user.description %> </p>
       </div>
     </div>
 
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <div class="bloc-experience">
-        <h3>Qualification</h3>
-      <p> <%= current_user.degree %> </p>
+          <h3>Qualification</h3>
+        <p> <%= current_user.degree %> </p>
+      </div>
+      <div class="bloc-experience">
+        <h3>Expérience</h3>
+        <p> <%= current_user.years_of_experience %> ans </p>
+      </div>
     </div>
 
-    </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 
     </div>
-  </div>
+</div>
 
   <div class="container-center">
     <div class="btn-green">
@@ -73,8 +71,6 @@
     </div>
       <%= link_to 'REFUSER', root_path, class: "titleh3"  %>
   </div>
-
-
 
 </div>
 
