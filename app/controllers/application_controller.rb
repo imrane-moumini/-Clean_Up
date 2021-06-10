@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :address, :degree, :years_of_experience, :photo, :degree_file, :cleaner, :description, :number_of_reviews, :user_price])
   end
+  @skip_navbar = true
 
   # Pundit: white-list approach.
 
