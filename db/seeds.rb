@@ -1,10 +1,10 @@
 
 require "open-uri"
-
-User.destroy_all
-Slot.destroy_all
-Booking.destroy_all
 Review.destroy_all
+Booking.destroy_all
+Slot.destroy_all
+User.destroy_all
+
 
 puts "begin users"
 
@@ -13,7 +13,7 @@ file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419
 user1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user1.save
 
-user2 = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Marseille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2)
+user2 = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Lille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2)
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user2.save
@@ -23,7 +23,7 @@ file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419
 user3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user3.save
 
-user4 = User.create!(first_name: "Selma", last_name: "Benmeradi", email: "selma.benmeradi@gmail.com", password: "password4", address: "20 rue Bel Air 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 1)
+user4 = User.create!(first_name: "Selma", last_name: "Benmeradi", email: "selma.benmeradi@gmail.com", password: "password4", address: "20 rue Bel Air 13006 Amiens", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 1)
 file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 user4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user4.save
@@ -44,34 +44,38 @@ puts "end users"
 
 puts "begin slot"
 
+start = DateTime.now
+slot1 = Slot.new(user_id: user1.id)
+slot1.start_time = start
+slot1.end_time = start + 4.hours
+slot1.save!
 
-slot1 = Slot.create!(user_id: user1.id, day: Date.parse("2021-6-22"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
 
-slot2 = Slot.create!(user_id: user2.id, day: Date.parse("2021-6-21"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+slot2 = Slot.create!(user_id: user2.id, start_time: start, end_time: start + 4.hours)
 
-slot3 = Slot.create!(user_id: user3.id, day: Date.parse("2021-6-20"), start_time: Time.parse("12:00:00"), end_time: Time.parse("17:00:00"))
+slot3 = Slot.create!(user_id: user3.id, start_time: start, end_time: start + 4.hours)
 
-slot4 = Slot.create!(user_id: user4.id, day: Date.parse("2021-6-24"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot4 = Slot.create!(user_id: user4.id, start_time: start, end_time: start + 4.hours)
 
-slot5 = Slot.create!(user_id: user5.id, day: Date.parse("2021-6-25"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot5 = Slot.create!(user_id: user5.id, start_time: start, end_time: start + 4.hours)
 
-slot6 = Slot.create!(user_id: user6.id, day: Date.parse("2021-6-23"), start_time: Time.parse("09:00:00"), end_time: Time.parse("13:00:00"))
+slot6 = Slot.create!(user_id: user6.id, start_time: start, end_time: start + 4.hours)
 
 puts "end slot"
 
 puts "begin booking"
 
-booking1 = Booking.create!(user_id: user1.id, slot_id: slot1.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
+booking1 = Booking.create!(user_id: user1.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours)
 
-booking2 = Booking.create!(user_id: user2.id, slot_id: slot2.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
+booking2 = Booking.create!(user_id: user2.id, slot_id: slot2.id, start_time: start, end_time: start + 1.hours, status: true)
 
-booking3 = Booking.create!(user_id: user3.id, slot_id: slot3.id, start_time: Time.parse("12:00:00"), end_time: Time.parse("14:00:00"), status: true)
+booking3 = Booking.create!(user_id: user3.id, slot_id: slot3.id, start_time: start, end_time: start + 1.hours, status: true)
 
-booking4 = Booking.create!(user_id: user4.id, slot_id: slot4.id, start_time: Time.parse("09:00:00"), end_time: Time.parse("11:00:00"), status: true)
+booking4 = Booking.create!(user_id: user4.id, slot_id: slot4.id, start_time: start, end_time: start + 4.hours, status: true)
 
-booking5 = Booking.create!(user_id: user5.id, slot_id: slot5.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
+booking5 = Booking.create!(user_id: user5.id, slot_id: slot5.id, start_time: start, end_time: start + 4.hours, status: true)
 
-booking6 = Booking.create!(user_id: user6.id, slot_id: slot6.id, start_time: Time.parse("10:00:00"), end_time: Time.parse("12:00:00"), status: true)
+booking6 = Booking.create!(user_id: user6.id, slot_id: slot6.id, start_time: start, end_time: start + 4.hours, status: true)
 
 puts "end booking"
 
