@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_06_09_153921) do
+ActiveRecord::Schema.define(version: 2021_06_10_105949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,10 +42,10 @@ ActiveRecord::Schema.define(version: 2021_06_09_153921) do
     t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "task_accomplished"
-    t.integer "booking_price"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.boolean "task_accomplished"
+    t.integer "booking_price"
     t.index ["slot_id"], name: "index_bookings_on_slot_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
