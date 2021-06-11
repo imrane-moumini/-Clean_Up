@@ -14,7 +14,6 @@ user1.save
 
 
 user2 = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Lille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2, description: "Bonjour je m'appelle Margaux, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 50, user_price: 10)
-
 file = URI.open('https://shayaridp.in/wp-content/uploads/2020/05/smile-girl-profile-picture-whatsapp-dp-images.jpg')
 user2.photo.attach(io: file, filename: 'margauxpic.jpg', content_type: 'image/jpg')
 user2.save
