@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
 
+
     @ville = params[:ville]
     @start_query = params[:start_time]
     @end_query = params[:end_time]
@@ -21,6 +22,7 @@ class BookingsController < ApplicationController
     end
 
     @available_slot_one = @available_slots.sample
+
   end
 
   def show
@@ -36,6 +38,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.user = current_user
+    @booking.task_accomplished = false
     #@booking.dashboard = @dashboard
     @booking.booking_price =  ( ((@booking.end_time - @booking.start_time)/3600) * @booking.user.user_price )
 

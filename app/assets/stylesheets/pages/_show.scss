@@ -1,11 +1,223 @@
 .top-title p {
-  width: 159px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 28px;
   color: #5E616F;
   line-height: 33px;
   font-style: normal;
-  margin-left: 108px;
-  margin-top: -25px;
+  margin-top: 15px;
+  margin-left: 70px;
 }
+
+.cards-recap{
+  height: 80px;
+  background: #F2F3F4;
+  border: 1px solid #E9EBED;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin:auto;
+}
+
+.card-dash-infos img {
+  object-fit: cover;
+}
+
+.cards-recap-infos {
+  margin-left: 20px;
+}
+
+.cards-recap h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5E616F;
+}
+
+.cards-recap p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #B4B4BA;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding-top: 3px;
+  color: #B4B4BA;
+}
+
+.champ-title p {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  color:#5E616F;
+  font-weight: 500;
+  margin-top: 25px;
+ }
+
+.champ-big-gray {
+  width: 325px;
+  height: 55px;
+  background: #F2F3F4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.champ-big-gray p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 14px;
+  color: #5E616F;
+  padding: 20px;
+}
+
+
+.champ-small-gray{
+  width: 150px;
+  height: 55px;
+  background: #F2F3F4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.champ-small-gray p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 14px;
+  color: #5E616F;
+  padding: 20px;
+}
+
+.champ-title p {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 25px;
+  color:#5E616F;
+ }
+
+ .container{
+  width: 375px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+}
+
+.container-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-green {
+  width: 246px;
+  height: 66px;
+  background: #15D39C;
+  border-radius: 50px;
+  margin-top: 19px;
+  color: white;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding: 20px;
+}
+
+.cards-price {
+  margin-top: 20px;
+  }
+.hour-title1 p {
+  text-align:left;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  color:#5E616F;
+  margin-top: 15px;
+ }
+
+ .hour-title2 p {
+  text-align:right;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  color:#5E616F;
+  margin-top: 15px;
+  padding-right: 65px;
+ }
+
+ .bottom-title p {
+   font-family: Roboto;
+  font-weight: 500;
+  font-size: 28px;
+  color: #5E616F;
+  line-height: 33px;
+  font-style: normal;
+  margin-top: 15px;
+  margin-left: 90px;
+}
+.champ-small{
+  width: 150px;
+  height: 55px;
+  background: #FFFFFF;
+  border: 1px solid #E9EBED;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.toggle-pay {
+  position: absolute;
+  top: 150vh;
+  background-color: white;
+  height: 100vh;
+}
+
+.toggle-pay.is-visible {
+  top: 0px;
+}
+
+.btn-pay {
+  width: 246px;
+  height: 66px;
+  background: #15D39C;
+  border-radius: 50px;
+  margin-top: 19px;
+  color: white;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding: 20px;
+  border:none;
+}
+

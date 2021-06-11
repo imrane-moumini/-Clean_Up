@@ -8,6 +8,7 @@
   border-radius: 20px;
   position: relative;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .card-dash .green {
@@ -26,6 +27,7 @@
       font-size: 17px;
       line-height: 20px;
       color: #FFFFFF;
+      text-align: center;
     }
 }
 
@@ -45,6 +47,7 @@
       font-size: 17px;
       line-height: 20px;
       color: #FFFFFF;
+      text-align: center;
     }
 }
 
@@ -73,6 +76,11 @@
   margin-bottom: 0;
 }
 
-.card-dash .card-dash-infos {
+.card-dash .card-dash-infos-green {
   padding-left: 20px;
+  width: 120px;
+}
+
+.card-dash .card-dash-infos{
+    padding-left: 20px;
 }

@@ -15,6 +15,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :address, :degree, :years_of_experience, :photo, :degree_file, :cleaner, :description, :number_of_reviews, :user_price])
   end
 
+
+
   # Pundit: white-list approach.
 
 

@@ -3,10 +3,13 @@
   background-color: transparent;
   position: relative;
   width: 375px;
+
+  z-index:100;
+  margin-bottom: -50px;
+  position: relative;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
   width: 375px;
   height: 812px;
   background-color: white;
@@ -19,16 +22,52 @@
   margin-top: 55px;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+
 }
 h1, .h1 {
     font-size: 1.3rem;
     text-align: center;
     font-family: Roboto;
     color: #5E616F;
+    text-decoration: none;
 
 }
 .navbar-light .navbar-toggler {
   border-color: white;
   color: #5e626f;
   }
+
+
+  @media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 50px; /* adjust to height of navbar */
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+        z-index: 1000;
+
+    }
+
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+}
+
+.navbar{
+    padding-bottom: 0;
+    }
