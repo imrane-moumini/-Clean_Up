@@ -1,20 +1,41 @@
 
 <div class=" navbar-expand-sm navbar-bas fixed-bottom justify-content-around">
 
-  <div class= "nav-link-bas">
-    <%= link_to root_path  do %>
-      <%= image_tag("Home_sans_fond.png")%>
-    <% end %>
-  </div>
-  <div class= "nav-link-bas">
-    <%= link_to dashboard_path  do %>
-      <%= image_tag("Dashboard_sans_fond.png")%>
-    <% end %>
-  </div>
+
+  <% if controller_name == "pages" && action_name == "home"%>
+      <div class= "nav-link-bas">
+        <%= link_to root_path  do %>
+          <%= image_tag("Home_sans_fond.png")%>
+        <% end %>
+      </div>
+  <% else  %>
+      <div class= "nav-link-bas">
+        <%= link_to root_path  do %>
+          <%= image_tag("home_blanc.png")%>
+        <% end %>
+      </div>
+  <% end  %>
+
+
+  <% if controller_name == "pages" && action_name == "dashboard"%>
+      <div class= "nav-link-bas">
+        <%= link_to dashboard_path  do %>
+          <%= image_tag("Dashboard_sans_fond.png")%>
+        <% end %>
+      </div>
+  <% else %>
+      <div class= "nav-link-bas">
+        <%= link_to dashboard_path  do %>
+          <%= image_tag("resa_blanc.png")%>
+        <% end %>
+      </div>
+  <% end  %>
+
 
   <div class= "nav-link-bas">
     <%= link_to dashboard_path  do %>
-      <%= image_tag("Profil_sans_fond.png") %>
+      <%= image_tag("profil_blanc.png") %>
     <% end %>
   </div>
+
 </div>
