@@ -22,13 +22,15 @@
   margin-top: 55px;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+
 }
 h1, .h1 {
     font-size: 1.3rem;
     text-align: center;
     font-family: Roboto;
     color: #5E616F;
+    text-decoration: none;
 
 }
 .navbar-light .navbar-toggler {
@@ -65,3 +67,7 @@ h1, .h1 {
         transition: left 500ms ease-in-out;
     }
 }
+
+.navbar{
+    padding-bottom: 0;
+    }

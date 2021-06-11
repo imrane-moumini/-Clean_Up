@@ -38,6 +38,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.user = current_user
+    @booking.task_accomplished = false
     #@booking.dashboard = @dashboard
     @booking.booking_price =  ( ((@booking.end_time - @booking.start_time)/3600) * @booking.user.user_price )
 
