@@ -1,7 +1,20 @@
 
 <div class=" navbar-expand-sm navbar-bas fixed-bottom justify-content-around">
 
-  <%= link_to image_tag("Home_sans_fond.png"), "#", class: "nav-link-bas" %>
-  <%= link_to image_tag("Dashboard_sans_fond.png"), "#", class: "nav-link-bas" %>
-  <%= link_to image_tag("Profil_sans_fond.png"), "#", class: "nav-link-bas" %>
+  <div class= "nav-link-bas">
+    <%= link_to root_path  do %>
+      <%= image_tag("Home_sans_fond.png")%>
+    <% end %>
+  </div>
+  <div class= "nav-link-bas">
+    <%= link_to dashboard_path  do %>
+      <%= image_tag("Dashboard_sans_fond.png")%>
+    <% end %>
+  </div>
+
+  <div class= "nav-link-bas">
+    <%= link_to dashboard_path  do %>
+      <%= image_tag("Profil_sans_fond.png") %>
+    <% end %>
+  </div>
 </div>

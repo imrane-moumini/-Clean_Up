@@ -24,3 +24,40 @@
   left: 120px;
   top: 80px;
 }
+
+.btn-green{
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #15D39C;
+  background-color: #fff;
+  border-color: #15D39C #15D39C #15D39C;
+  border-bottom: 2px solid #15D39C;
+}
+
+.nav-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  color: #B4B4BA;
+}
+
+.nav{
+  margin-bottom: 20px;
+}
+
+.fa-arrow-left a{
+  padding-top: 20px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  color: #5E616F;
+  font-size: 25px;
+}
