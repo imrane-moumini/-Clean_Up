@@ -1,11 +1,42 @@
 .top-title p {
-  width: 159px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 28px;
-  color: #5E616F;
-  line-height: 33px;
-  font-style: normal;
   margin-left: 108px;
-  margin-top: -25px;
+  margin-top: -35px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #5E616F;
 }
+
+.nav-pills .nav-link {
+    background: none;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #5E616F;
+    width: 150px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #15D39C;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.nav-pills {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
