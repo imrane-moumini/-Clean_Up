@@ -1,0 +1,98 @@
+
+<div class= "fas fa-arrow-left" >
+  <% link_to root_path %>
+</div>
+
+<div class="container-center">
+  <div class="top-title">
+    <p>RÉCAPITULATIF</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="cards-recap">
+   <%= cl_image_tag @booking.slot.user.photo.key, class: "avatar-carre" %>
+    <div class="cards-recap-infos">
+      <h2><%= @booking.slot.user.first_name %></h2>
+        <div class="rating">
+          <% @booking.slot.user.reviews.each do |review| %>
+            <% review.rating.times do %>
+              <i class="fas fa-star gray-star"></i>
+            <%end%>
+            <% ( 5 - review.rating).times do %>
+              <i class="far fa-star gray-star"></i>
+            <%end%>
+          <%end%><p><%=@booking.slot.user.number_of_reviews%> avis</p>
+        </div>
+        </div>
+    </div>
+
+  <div class="champ-title">
+    <p>Adresse</p>
+  </div>
+  <div class="champ-big-gray">
+    <p><%=@booking.slot.user.address%></p>
+  </div>
+
+  <div class="champ-title">
+    <p>Date</p>
+  </div>
+
+  <div class="champ-big-gray">
+    <p><%= @booking.start_time.strftime("%Y %B %d")%></p>
+  </div>
+
+  <div class="container-flex">
+    <div class="hour-title1">
+      <p>Heure de début </p>
+    </div>
+    <div class="hour-title2">
+      <p>Heure de fin</p>
+    </div>
+  </div>
+
+
+  <div class="container-flex">
+    <div class="champ-small-gray">
+      <p><%= @booking.start_time.strftime("%H:00") %></p>
+    </div>
+    <div class="champ-small-gray">
+      <p><%= @booking.end_time.strftime("%H:00") %></p>
+    </div>
+  </div>
+
+  <div class="cards-price">
+    <div class="cards-price-flex">
+      <p>Prestation</p>
+      <p><%=@booking.booking_price%> €</p>
+    </div>
+    <div class="cards-price-flex">
+      <p>Frais </p>
+      <% @frais = 2.50 %>
+      <p> <%= @frais %> € </p>
+    </div>
+    <div class="ligne w-100"></div>
+    <div class="cards-price-flex">
+      <h3>Total</h3>
+      <% @total = @frais + @booking.booking_price %>
+      <h3> <%= @total %> €</h3>
+    </div>
+  </div>
+
+  <div class="container-center">
+  <% if @booking.task_accomplished == false %>
+    <div class= "btn-red">
+      <%= link_to 'ANNULER', booking_path(@booking), method: :delete, data: { confirm: " Êtes-vous sûr de vouloir annuler votre réservation"}, class: 'text-danger'%>
+    </div>
+
+  <% else @booking.task_accomplished == true %>
+   <div class= "btn-green">
+      <%= link_to 'LAISSER UN AVIS', new_booking_review_path(@booking) %>
+    </div>
+  <%  end  %>
+  </div>
+
+<div class="container-center">
+  <%= link_to 'chat', chatroom_path(@booking.chatroom), class: "btn-green"  %>
+</div>

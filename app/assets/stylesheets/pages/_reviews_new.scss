@@ -1,0 +1,103 @@
+.container-1 {
+  background: #15D39C;
+  height: 400px;
+  position: relative;
+  h2{
+  margin-top: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 23px;
+  text-align: center;
+  color: #15D39C;
+}
+}
+
+
+.container-white{
+  width: 375px;
+  height: 505px;
+  left: 0px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  position: absolute;
+  top: 260px;
+}
+
+.btn-green {
+    width: 246px;
+    height: 66px;
+    background: #15D39C;
+    border-radius: 50px;
+    margin-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.form{
+  padding: 25px;
+}
+
+.form-champ{
+  border-radius: 10px;
+  border: 1px solid #E9EBED;
+  height: 140px;
+}
+
+
+.form-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  color: #5E616F;
+  padding: 10px;
+}
+
+.trait-1 {
+  border: 1px solid #F2F3F4;
+  position: absolute;
+  width: 34px;
+  top: 50px;
+  left: 20px;
+}
+
+.trait-2 {
+  border: 1px solid #F2F3F4;
+  width: 42px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+.logo img {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 50px;
+  right: 135px;
+}
+
+.container-1 h1{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFEFE;
+  position: absolute;
+  top: 200px;
+  left: 118px;
+}

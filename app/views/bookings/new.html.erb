@@ -17,7 +17,14 @@
   <div class="cards-infos">
     <div class="cards-infos-left">
       <div class="rating-infos">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> <%=@available_slot_one.user.number_of_reviews%> avis </p>
+        <% @available_slot_one.user.reviews.each do |review| %>
+          <% review.rating.times do %>
+            <i class="fas fa-star gray-star"></i>
+          <%end%>
+          <% ( 5 - review.rating).times do %>
+            <i class="far fa-star gray-star"></i>
+          <%end%>
+        <%end%><p><%=@available_slot_one.user.number_of_reviews%> avis </p>
       </div>
       <h2><%=@available_slot_one.user.first_name%></h2>
       <div class="cards-infos-address">

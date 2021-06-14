@@ -1,0 +1,23 @@
+<div class="container-1">
+  <div class= "logo"><%= image_tag("Logo_rond_blanc.png") %></div>
+  <div name-logo> <h1>CLEAN UP</h1></div>
+  <div class="container-white">
+    <div class="trait-1"></div>
+    <h2>NOTER LA PRESTATION</h2>
+    <div class="trait-2"></div>
+
+    <%= simple_form_for([@booking, @review], html: { class: "form"}) do |f| %>
+      <%= f.input :rating, label: "Note", label_html: { class: "form-text" }, as: :hidden %>
+        <div class="my-2">
+        <% 5.times do |index| %>
+          <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+        <% end %>
+      </div>
+      <%= f.input :content, label: "Commentaire",  input_html: { class: "form-champ" }, label_html: { class: "form-text" } %>
+      <div class="container-center">
+      <%= f.submit "ENVOYER", class: "btn-green"%>
+      </div>
+    <% end %>
+  </div>
+</div>
+
