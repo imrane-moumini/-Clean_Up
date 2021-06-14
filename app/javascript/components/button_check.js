@@ -1,3 +1,4 @@
+const initButton=() => {
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');
 
@@ -8,7 +9,9 @@ function toggleClass() {
 function addClass() {
   this.classList.add('finished');
 }
-
-button.addEventListener('click', toggleClass);
-button.addEventListener('transitionend', toggleClass);
-button.addEventListener('transitionend', addClass);
+if (button){
+  button.addEventListener('click', toggleClass);
+  button.addEventListener('transitionend', toggleClass);
+  button.addEventListener('transitionend', addClass);
+  }
+}
