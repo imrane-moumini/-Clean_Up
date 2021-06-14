@@ -314,7 +314,7 @@ $lg: new-breakpoint(min-width 1024px);
   }
 }
 
-.active {
+.button.active {
   background-color: $color-3;
 
   &:before {
