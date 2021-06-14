@@ -3,12 +3,11 @@
   background-color: transparent;
   position: relative;
   width: 375px;
-
   z-index:100;
   margin-bottom: -50px;
-  position: relative;
-
+  pointer-events: none;
 }
+
 .navbar-lewagon .navbar-collapse {
   width: 375px;
   height: 812px;
@@ -47,8 +46,8 @@ h1, .h1 {
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 15px;
-        width: 75%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         z-index: 1000;
 
     }
@@ -75,3 +74,7 @@ h1, .h1 {
 .navbar-light .navbar-toggler {
   border-color: transparent;
   }
+
+.navbar-toggler{
+  pointer-events: all;
+}

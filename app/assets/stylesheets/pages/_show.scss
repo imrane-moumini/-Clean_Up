@@ -63,7 +63,7 @@
   font-size: 16px;
   color:#5E616F;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 16px;
  }
 
 .champ-big-gray {
@@ -110,7 +110,7 @@
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 16px;
   color:#5E616F;
  }
 
@@ -131,12 +131,12 @@
   display: flex;
   justify-content: space-between;
 }
-.btn-green {
+a.btn-green {
   width: 246px;
   height: 66px;
   background: #15D39C;
   border-radius: 50px;
-  margin-top: 19px;
+  margin-top: 15px;
   color: white;
   text-decoration: none;
   font-family: Roboto;
@@ -146,6 +146,7 @@
   line-height: 21px;
   text-align: center;
   padding: 20px;
+
 }
 
 .cards-price {

@@ -3,9 +3,9 @@
     <p>Personnne de dispo déso</p>
     <%= link_to root_path  %>
   <% else %>
- <div class= "fas fa-arrow-left" >
-  <% link_to root_path %>
- </div>
+
+ <%= link_to root_path, class: "fas fa-arrow-left" do %>
+  <% end %>
 
 <div class="flex">
   <%= cl_image_tag @available_slot_one.user.photo.key, class: "card-img" %>
