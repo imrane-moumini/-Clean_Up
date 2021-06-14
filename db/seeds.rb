@@ -1,5 +1,7 @@
 
 require "open-uri"
+Message.destroy_all
+Chatroom.destroy_all
 Review.destroy_all
 Booking.destroy_all
 Slot.destroy_all
@@ -98,3 +100,9 @@ review6 = Review.create!(content: "Jean a remis mon salon en super état après 
 
 
 puts "end review"
+
+puts "begin charoom"
+
+chatroom1 = Chatroom.create(name: "general")
+
+puts "end chatroom"

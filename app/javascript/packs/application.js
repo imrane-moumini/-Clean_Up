@@ -28,6 +28,7 @@ import { initButton } from '../components/button_check';
 import { dynamicRating } from "../plugins/starsInReviewForm";
 
 
+import { initChatroomCable } from '../channels/chatroom_channel';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -36,6 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initToggle();
   initButton();
+  initChatroomCable();
 });
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
