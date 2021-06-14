@@ -17,5 +17,7 @@ class MessagesController < ApplicationController
   end
 
   private
-  require(:message).permit(:content)
+  def message_params
+    params.require(:message).permit(:content)
+  end
 end
