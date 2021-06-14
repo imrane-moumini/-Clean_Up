@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
     authorize @booking
 
 
-
     @ville = params[:ville]
     @start_query = params[:start_time]
     @end_query = params[:end_time]
@@ -50,17 +49,16 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    authorize @booking
-
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to dashboard_path, notice: 'This booking was successfully destroyed.'
+    authorize @booking
+
   end
 
   def recap
     @booking = Booking.find(params[:id])
     authorize @booking
-    @review = Review.new
   end
 
   private

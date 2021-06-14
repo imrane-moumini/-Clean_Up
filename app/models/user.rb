@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :slots
   has_many :bookings
   has_many :reviews
+  has_many :messages
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

@@ -25,7 +25,10 @@ require("channels")
 import "bootstrap";
 import { initToggle } from '../components/init_toggle_pay';
 import { initButton } from '../components/button_check';
+
 import { initLogin } from '../components/login_form';
+import { dynamicRating } from "../plugins/starsInReviewForm";
+import { initChatroomCable } from '../channels/chatroom_channel';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,9 +38,17 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initToggle();
   initButton();
+
   initLogin ();
 });
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
+  initChatroomCable();
+});
+// Internal imports, e.g:
+// import { initSelect2 } from '../components/init_select2';
+
+dynamicRating();
