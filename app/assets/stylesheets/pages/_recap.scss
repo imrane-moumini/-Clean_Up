@@ -132,19 +132,27 @@
   display: flex;
   justify-content: space-between;
 }
-.btn-green {
-  width: 246px;
-  height: 66px;
-  background: #15D39C;
-  border-radius: 50px;
-  margin-top: 19px;
-  color: white;
+
+.btn-red{
+  margin-top: 20px;
+}
+
+.btn-green a {
   text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  padding: 20px;
+  color: white;
+}
+
+
+.text-danger {
+    color: white !important;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
