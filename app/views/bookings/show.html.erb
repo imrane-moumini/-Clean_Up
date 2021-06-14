@@ -1,9 +1,14 @@
+<!DOCTYPE html>
+<html>
+
 <div class= "fas fa-arrow-left" >
   <% link_to root_path %>
 </div>
 
-<div class="top-title">
-  <p>RÉCAPITULATIF</p>
+<div class="container-center">
+  <div class="top-title">
+    <p>RÉCAPITULATIF</p>
+  </div>
 </div>
 
 <div class="container">
@@ -73,8 +78,7 @@
 <div class="container-center">
 
 
- <!-- link_to 'PAYER', dashboard_path, class: "btn-pay" -->
-  <button type="button" class="btn-pay">PAYER</button>
+ <%= link_to 'PAYER', dashboard_path, class: "btn-green"%>
   <%= link_to 'MODIFIER', root_path, class: "titleh3"  %>
 </div>
 
@@ -119,7 +123,16 @@
   </div>
 </div>
 
+<!-- <div class="container-center">
+  <span<%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>/span>
+</div>
+</div> -->
 <div class="container-center">
-  <%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>
+<button class="button">
+  <span class="submit">PAYER</span>
+  <span class="loading"><i class="fa fa-refresh"></i></span>
+  <span class="check"><i class="fa fa-check"></i></span>
+</button>
 </div>
 </div>
+</html>
