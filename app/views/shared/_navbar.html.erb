@@ -26,8 +26,10 @@
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to image_tag("Parametre_fond_vert.png"), "#", class: "nav-link" %>
-          <h1>Paramètres</h1>
+          <%= link_to destroy_user_session_path  do %>
+            <div class= "nav-link"><%= image_tag("Parametre_fond_vert.png") %></div>
+            <h1>Se déconnecter</h1>
+          <% end %>
         </li>
       <% else %>
         <li class="nav-item">

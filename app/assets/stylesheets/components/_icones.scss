@@ -23,5 +23,7 @@
   left: 10px;
   color: #5E616F;
   font-size: 25px;
-  text-decoration: none
+  text-decoration: none;
+  z-index: 10000;
+  pointer-events: all;
   }
