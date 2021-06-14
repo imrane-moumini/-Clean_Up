@@ -7,8 +7,8 @@
   z-index:100;
   margin-bottom: -50px;
   position: relative;
-}
 
+}
 .navbar-lewagon .navbar-collapse {
   width: 375px;
   height: 812px;
@@ -71,3 +71,7 @@ h1, .h1 {
 .navbar{
     padding-bottom: 0;
     }
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+  }
