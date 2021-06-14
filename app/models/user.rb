@@ -5,8 +5,9 @@ class User < ApplicationRecord
   has_one_attached :degree_file
   has_many :slots
   has_many :bookings
-  has_many :reviews
+  has_many :reviews, through: :bookings
   has_many :messages
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

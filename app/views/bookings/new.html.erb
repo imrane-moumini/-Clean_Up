@@ -61,12 +61,12 @@
     </div>
 
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <% @available_slot_one.user.reviews.each do |review| %>
+      <% @available_slot_one.user.bookings.each do |booking| %>
         <div class="cards-review">
-             <%= cl_image_tag @available_slot_one.user.photo.key, class: "avatar" %>
+             <%= cl_image_tag booking.user.photo.key, class: "avatar" %>
             <div class="cards-review-content">
-              <h2><%= @available_slot_one.user.first_name%></h2>
-              <p><%= review.content%></p>
+              <h2><%= booking.user.first_name%></h2>
+              <p><%= booking.review.content%></p>
             </div>
           </div>
       <% end %>
