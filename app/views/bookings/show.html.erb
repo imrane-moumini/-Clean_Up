@@ -18,7 +18,14 @@
   <div class="cards-recap-infos">
     <h2><%= @booking.slot.user.first_name %></h2>
       <div class="rating">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p> 56 avis </p>
+        <% @booking.slot.user.reviews.each do |review| %>
+          <% review.rating.times do %>
+            <i class="fas fa-star gray-star"></i>
+          <%end%>
+          <% ( 5 - review.rating).times do %>
+            <i class="far fa-star gray-star"></i>
+          <%end%>
+        <%end%><p><%=@booking.slot.user.number_of_reviews%> avis</p>
       </div>
   </div>
 </div>
