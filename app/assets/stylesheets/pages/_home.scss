@@ -1,18 +1,36 @@
-
-
-.img-perso {
-  width: 375px;
-  height: 252px;
-  margin-left: 0px;
-  top: 54px;
+.block-vert {
+  width: 390px;
+  height: 50px;
+  background: #15D39C;
 }
+.banner h2{
+  color: white;
+  margin-top:-97px;
+  font-family: roboto;
+  font-size: 33px;
+  margin-left: 10px;
+}
+
+.banner p{
+  color: white;
+  font-family: roboto;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.img-perso {
+  width: 389px;
+  height: 272px;
+  margin-top: -2px;
+}
+
 .booking-form {
 margin-top: 20px;
 text-align: center;
+margin-top: 54px;
 }
 .booking-form .form-group {
 
-  width: 150px;
+  width: 250px;
   height: 55px;
   background: #FFFFFF;
   border: 1px solid #E9EBED;
@@ -46,4 +64,18 @@ form>input {
   padding: 20px;
   font-family: Roboto;
   font-weight: bold;
+
 }
+
+#home-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.input:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
+

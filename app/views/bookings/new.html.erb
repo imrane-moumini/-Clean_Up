@@ -1,3 +1,8 @@
+
+    <% if @available_slots.empty? %>
+    <p>Personnne de dispo déso</p>
+    <%= link_to root_path  %>
+  <% else %>
  <div class= "fas fa-arrow-left" >
   <% link_to root_path %>
  </div>
@@ -59,14 +64,9 @@
           </div>
       <% end %>
     </div>
-</div>
 
   <div class="container-center">
 
-    <% if @available_slots.empty? %>
-    <p>Personnne de dispo déso</p>
-    <%= link_to "Refaire une recherche", root_path  %>
-  <% else %>
     <%= simple_form_for(@booking) do |f| %>
       <input name="booking[start_time]" value="<%= @start_query %>" class="d-none">
       <input name="booking[end_time]" value="<%= @end_query %>" class="d-none">
