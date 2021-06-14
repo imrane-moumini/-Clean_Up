@@ -7,6 +7,9 @@
         <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
       </i>
       <p><%= message.content %></p>
+      <% if policy(message).destroy? %>
+      <small> <%= link_to 'supprimer le message',  chatroom_message_path(message), method: :delete, data: { confirm: 'êtes vous sûr ?'} %></small>
+      <% end %>
     </div>
   <% end %>
 </div>

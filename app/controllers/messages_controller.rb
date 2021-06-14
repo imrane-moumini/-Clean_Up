@@ -16,6 +16,14 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+
+    @message = Message.find(params[:chatroom_id])
+    authorize @message
+    @message.destroy
+    redirect_to chatroom_path(@message.chatroom), notice: 'This chatroom was successfully destroyed.'
+  end
+
   private
   def message_params
     params.require(:message).permit(:content)
