@@ -78,7 +78,13 @@
       <input name="booking[start_time]" value="<%= @start_query %>" class="d-none">
       <input name="booking[end_time]" value="<%= @end_query %>" class="d-none">
       <%= f.input :slot_id, input_html: { value: @available_slot_one.id, class: 'd-none' }, label: false %>
-      <%= f.submit "ACCEPTER", class: "btn-green" %>
+      <div class="container-center">
+        <button class="button">
+          <span class="submit">PAYER</span>
+          <span class="loading"><i class="fa fa-refresh"></i></span>
+          <span class="check"><i class="fa fa-check"></i></span>
+        </button>
+      </div>
     <% end %>
     <%= link_to 'REFUSER', new_booking_path(ville: @ville, start_time: @start_query, end_time: @end_query), class: "titleh3"%>
   <% end %>
