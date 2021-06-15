@@ -6,6 +6,10 @@
   color: #B4B4BA;
   background-color:#15D39C;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
 }
 a {
   cursor: pointer;
@@ -55,6 +59,7 @@ h6 span{
   margin: 10px auto;
   cursor: pointer;
   background-color: white;
+  margin-top: 25px;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -63,7 +68,7 @@ h6 span{
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #B4B4BA;
+  color: #15D39C;
   background-color: white;
   font-family: 'unicons';
   content: '\eb4f';
@@ -88,7 +93,7 @@ h6 span{
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
-  margin-top: 195px;
+  margin-top: 32px;
 }
 .card-3d-wrapper {
   width: 100%;
@@ -108,7 +113,7 @@ h6 span{
   background-repeat: no-repeat;
   background-size: 300%;
   position: absolute;
-  border-radius: 33px;
+  border-radius: 33px 33px 0px 0px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -166,15 +171,19 @@ h6 span{
 }
 
 
-.logo {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  display: block;
+.welcome-logo img {
+  width: 150px;
+  height: 150px;
   z-index: 100;
   transition: all 250ms linear;
-  height: 26px;
-  width: auto;
+}
+
+.welcome-logo {
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mb-4 {
