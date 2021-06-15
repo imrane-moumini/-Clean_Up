@@ -16,9 +16,11 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
 
-    <% unless @skip_navbar %>
-      <%= render partial: 'shared/navbar_bas' %>
+
+    <% unless current_page?(new_user_session_path)%>
+     <%= render 'shared/navbar_bas' %>
     <% end %>
+
 
 
   </body>
