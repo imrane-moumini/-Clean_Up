@@ -33,33 +33,29 @@ class BookingsController < ApplicationController
   def create
 
 
-    @booking = Booking.create!(booking_params)
+    @booking = Booking.new(booking_params)
     authorize @booking
 
     @booking.user = current_user
     @booking.task_accomplished = false
-    #@booking.dashboard = @dashboard
-    @booking.booking_price_cents = ( ((@booking.end_time - @booking.start_time)/3600) * @booking.user.user_price_cents )
+    if @booking.save
+      session = Stripe::Checkout::Session.create({
+        payment_method_types: ['card'],
+        line_items: [{
+          name: @booking.slot.user.first_name,
+          amount: @booking.computed_price,
+          currency: 'eur',
+          quantity: 1
+        }],
+        success_url: booking_url(@booking),
+        cancel_url: booking_url(@booking)
+      })
+      @booking.update(checkout_session_id: session.id)
+      redirect_to new_booking_payment_path(@booking)
 
-
-        session = Stripe::Checkout::Session.create(
-    payment_method_types: ['card'],
-    line_items: [{
-      name: @booking.slot.user.first_name,
-      images: @booking.slot.user.photo,
-      amount: @booking.booking_price_cents,
-      currency: 'eur',
-      quantity: 1
-    }],
-    success_url: booking_url(@booking),
-    cancel_url: booking_url(@booking)
-  )
-
-
-
-
-  @booking.update(checkout_session_id: session.id)
-  redirect_to new_booking_payment_path(@booking)
+    else
+      render :new
+    end
 
   end
 

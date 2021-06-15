@@ -65,7 +65,7 @@
   <div class="cards-price">
     <div class="cards-price-flex">
       <p>Prestation</p>
-      <p><%=@booking.booking_price%> €</p>
+      <p><%=@booking.display_price %> €</p>
     </div>
     <div class="cards-price-flex">
       <p>Frais </p>
@@ -75,7 +75,7 @@
     <div class="ligne w-100"></div>
     <div class="cards-price-flex">
       <h3>Total</h3>
-      <% @total = @frais + @booking.booking_price %>
+      <% @total = @frais + @booking.display_price  %>
       <h3> <%= @total %> €</h3>
     </div>
   </div>

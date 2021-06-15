@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/bookings/:id/recap', to: 'bookings#recap', as: :recap
   resources :bookings,  only: [:new, :create, :show, :destroy] do
       resources :reviews, only: [:create, :new]
+      resources :payments, only: :new
   end
   resources :slots, only: [:new, :create, :update, :destroy, :edit]
   resources :chatrooms, only: :show do
