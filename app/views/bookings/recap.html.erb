@@ -16,7 +16,7 @@
     <div class="cards-recap-infos">
       <h2><%= @booking.slot.user.first_name %></h2>
         <div class="rating">
-          <% @booking.slot.user.reviews.each do |review| %>
+          <% @reviews.each do |review| %>
             <% review.rating.times do %>
               <i class="fas fa-star gray-star"></i>
             <%end%>

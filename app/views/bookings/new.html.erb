@@ -17,11 +17,11 @@
   <div class="cards-infos">
     <div class="cards-infos-left">
       <div class="rating-infos">
-        <% @available_slot_one.user.reviews.each do |review| %>
+        <% @reviews.each do |review| %>
           <% review.rating.times do %>
             <i class="fas fa-star gray-star"></i>
           <%end%>
-          <% ( 5 - review.rating).times do %>
+          <% (5 - review.rating).times do %>
             <i class="far fa-star gray-star"></i>
           <%end%>
         <%end%><p><%=@available_slot_one.user.number_of_reviews%> avis </p>
@@ -61,12 +61,13 @@
     </div>
 
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <% @available_slot_one.user.bookings.each do |booking| %>
+      <%#= raise %>
+      <% @reviews.each do |review| %>
         <div class="cards-review">
-             <%= cl_image_tag booking.user.photo.key, class: "avatar" %>
+             <%= cl_image_tag review.booking.user.photo.key, class: "avatar" %>
             <div class="cards-review-content">
-              <h2><%= booking.user.first_name%></h2>
-              <p><%= booking.review.content%></p>
+              <h2><%= review.booking.user.first_name%></h2>
+              <p><%= review.content%></p>
             </div>
           </div>
       <% end %>
