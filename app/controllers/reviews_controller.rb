@@ -9,12 +9,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @booking = Booking.find([params:booking_id])
+    @booking = Booking.find(params[:booking_id])
     authorize @review
     @review.booking = @booking
 
       if @review.save
-        redirect_to dashboard_path
+        redirect_to dashboard_path, notice: "Merci pour votre commentaire #{current_user.first_name} ! 🙃"
       else
         render :new
       end

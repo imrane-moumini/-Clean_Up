@@ -10,4 +10,16 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def average_rating
+    reviews = slots
+    .map { |slot| slot.bookings }.flatten
+    .map { |booking| booking.review }.compact
+
+    ratings = reviews.map { |review| review.rating }
+
+    avg = ratings.sum / ratings.length
+    avg.round(half: :up)
+  end
+
 end
