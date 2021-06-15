@@ -12,8 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_06_14_133703) do
 
-
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -112,10 +110,9 @@ ActiveRecord::Schema.define(version: 2021_06_14_133703) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "slots"
   add_foreign_key "bookings", "users"
-  add_foreign_key "reviews", "bookings"
   add_foreign_key "chatrooms", "bookings"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "bookings"
   add_foreign_key "slots", "users"
 end

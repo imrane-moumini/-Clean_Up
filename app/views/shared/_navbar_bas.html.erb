@@ -11,7 +11,7 @@
   <% else  %>
       <div class= "nav-link-bas">
         <%= link_to root_path  do %>
-          <%= image_tag("home_blanc.png")%>
+          <%= image_tag("home-gris.png")%>
         <% end %>
       </div>
   <% end  %>
@@ -26,7 +26,7 @@
   <% else %>
       <div class= "nav-link-bas">
         <%= link_to dashboard_path  do %>
-          <%= image_tag("resa_blanc.png")%>
+          <%= image_tag("resa-gris.png")%>
         <% end %>
       </div>
   <% end  %>
@@ -34,15 +34,22 @@
 
   <div class= "nav-link-bas">
     <%= link_to dashboard_path  do %>
-      <%= image_tag("profil_blanc.png") %>
+      <%= image_tag("profil-gris.png") %>
     <% end %>
   </div>
 
 
-  <div class= "nav-link-bas">
-    <%= link_to dashboard_path  do %>
-      <%= image_tag("chat_gris.png") %>
-    <% end %>
-  </div>
-
+  <% if controller_name == "chatrooms" && action_name == "chatrooms"%>
+      <div class= "nav-link-bas">
+        <%= link_to dashboard_path  do %>
+          <%= image_tag("chat-vert.png")%>
+        <% end %>
+      </div>
+  <% else %>
+      <div class= "nav-link-bas">
+        <%= link_to dashboard_path  do %>
+          <%= image_tag("chat_gris.png")%>
+        <% end %>
+      </div>
+  <% end  %>
 </div>
