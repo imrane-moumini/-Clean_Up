@@ -40,15 +40,17 @@ document.addEventListener('turbolinks:load', () => {
   initButton();
 
   initLogin ();
-});
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
-
   initChatroomCable();
+  dynamicRating();
 });
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-dynamicRating();
+
+
+
+// Internal imports, e.g:
+// import { initSelect2 } from '../components/init_select2';
+
+
