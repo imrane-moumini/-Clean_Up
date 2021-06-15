@@ -39,17 +39,19 @@
   </div>
 
 
-  <% if controller_name == "chatrooms" && action_name == "chatrooms"%>
+<% unless current_user.bookings.empty? %>
+  <% if controller_name == "chatrooms" && action_name == "show"%>
       <div class= "nav-link-bas">
-        <%= link_to dashboard_path  do %>
+        <%= link_to chatroom_path(current_user.bookings.last.chatroom)  do %>
           <%= image_tag("chat-vert.png")%>
         <% end %>
       </div>
   <% else %>
       <div class= "nav-link-bas">
-        <%= link_to dashboard_path  do %>
+        <%= link_to chatroom_path(current_user.bookings.last.chatroom)  do %>
           <%= image_tag("chat_gris.png")%>
         <% end %>
       </div>
   <% end  %>
+  <% end %>
 </div>
