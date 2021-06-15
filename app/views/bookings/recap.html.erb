@@ -16,15 +16,14 @@
     <div class="cards-recap-infos">
       <h2><%= @booking.slot.user.first_name %></h2>
         <div class="rating">
-          <% @reviews.each do |review| %>
-            <% review.rating.times do %>
-              <i class="fas fa-star gray-star"></i>
-            <%end%>
-            <% ( 5 - review.rating).times do %>
-              <i class="far fa-star gray-star"></i>
-            <%end%>
-          <%end%><p><%=@booking.slot.user.number_of_reviews%> avis</p>
-        </div>
+          <% @booking.slot.user.average_rating.times do %>
+            <i class="fas fa-star gray-star"></i>
+          <%end%>
+          <% ( 5 - @booking.slot.user.average_rating).times do %>
+            <i class="far fa-star gray-star"></i>
+          <%end%>
+          <p><%=@booking.slot.user.number_of_reviews%> avis</p>
+          </div>
         </div>
     </div>
 
@@ -96,4 +95,8 @@
 <div class="container-center">
   <%= link_to 'chat', chatroom_path(@booking.chatroom), class: "btn-green"  %>
 </div>
+
+</div>
+
+
 

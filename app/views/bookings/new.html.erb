@@ -16,15 +16,14 @@
 
   <div class="cards-infos">
     <div class="cards-infos-left">
-      <div class="rating-infos">
-        <% @reviews.each do |review| %>
-          <% review.rating.times do %>
+       <div class="rating">
+          <% @available_slot_one.user.average_rating.times do %>
             <i class="fas fa-star gray-star"></i>
           <%end%>
-          <% (5 - review.rating).times do %>
+          <% ( 5 - @available_slot_one.user.average_rating).times do %>
             <i class="far fa-star gray-star"></i>
           <%end%>
-        <%end%><p><%=@available_slot_one.user.number_of_reviews%> avis </p>
+        <p><%=@available_slot_one.user.number_of_reviews%> avis</p>
       </div>
       <h2><%=@available_slot_one.user.first_name%></h2>
       <div class="cards-infos-address">
