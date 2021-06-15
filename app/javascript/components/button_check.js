@@ -1,9 +1,4 @@
 
-const initButton = () => {
-  const button = document.querySelector('.button');
-  const submit = document.querySelector('.submit');
-
-
   function toggleClass() {
     this.classList.toggle('active');
   }
@@ -11,6 +6,11 @@ const initButton = () => {
   function addClass() {
     this.classList.add('finished');
   }
+
+const initButton = () => {
+  const button = document.querySelector('.button');
+  const submit = document.querySelector('.submit');
+
 if (button) {
   button.addEventListener('click', toggleClass);
   button.addEventListener('transitionend', toggleClass);
@@ -18,12 +18,6 @@ if (button) {
   }
 }
 
-if (button){
-  button.addEventListener('click', toggleClass);
-  button.addEventListener('transitionend', toggleClass);
-  button.addEventListener('transitionend', addClass);
-  }
-}
 
 
 export{initButton};
