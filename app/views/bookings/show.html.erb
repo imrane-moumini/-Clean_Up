@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+
+<div class= "fas fa-arrow-left" >
+  <% link_to root_path %>
+</div>
+
+
  <%= link_to root_path, class: "fas fa-arrow-left" do %>
   <% end %>
 
@@ -65,7 +71,7 @@
 <div class="cards-price">
   <div class="cards-price-flex">
     <p>Prestation</p>
-    <p><%=@booking.booking_price%> €</p>
+    <p><%=@booking.display_price%> €</p>
   </div>
   <div class="cards-price-flex">
     <p>Frais </p>
@@ -75,7 +81,7 @@
   <div class="ligne w-100"></div>
   <div class="cards-price-flex">
     <h3>Total</h3>
-    <% @total = @frais + @booking.booking_price %>
+    <% @total = (@frais*100 + @booking.computed_price)/100 %>
     <h3> <%= @total %> €</h3>
   </div>
 </div>
@@ -83,7 +89,22 @@
 <div class="container-center">
 
 
- <%= link_to 'PAYER', dashboard_path, class: "btn-green"%>
-  <%= link_to 'MODIFIER', root_path, class: "titleh3"  %>
+ <!-- <div class="container-center">
+  <span<%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>/span>
+</div>
+</div> -->
+<div class="container-center">
+<button id="pay" class="btn btn-green">Pay</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @booking.checkout_session_id %>'
+          });
+        });
+     </script>
+</div>
 </div>
 </html>
