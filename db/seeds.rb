@@ -63,20 +63,16 @@ puts "end slot"
 puts "begin booking and reviews"
 
 
-booking1 = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_selma.user_price)
+booking1 = Booking.create!(user_id: user_imrane.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_selma.user_price)
 review1 = Review.create!(content: "#{booking1.slot.user.first_name} a fait du super travail, merci encore!", rating: 4, booking_id: booking1.id)
 
 booking2 = Booking.create!(user_id: user_margaux.id, slot_id: slot2.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_paul.user_price)
 review2 = Review.create!(content: "#{booking2.slot.user.first_name} m'a bien dépanné sur ce coup là, super taff!", rating: 5, booking_id: booking2.id)
 
-
-booking2b = Booking.create!(user_id: user_imrane.id, slot_id: slot2.id, start_time: start+ 2.hours , end_time: start + 3.hours, status: true, task_accomplished: false, booking_price: cleaner_paul.user_price)
-review2b = Review.create!(content: "#{booking2b.slot.user.first_name} m'a bien dépanné sur ce coup là, super taff!", rating: 2, booking: booking2b)
-
 booking3 = Booking.create!(user_id: user_imrane.id, slot_id: slot3.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_jean.user_price)
 review3 = Review.create!(content: "Encore un peu de poussière mais le gros du travail a été fait merci #{booking3.slot.user.first_name}", rating: 2, booking_id: booking3.id)
 
-booking_past = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start - 8.hours, end_time: start - 7.hours, status: true, task_accomplished: true, booking_price: cleaner_selma.user_price)
+booking_past = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start - 1.days, end_time: start - 1.days + 1.hours, status: true, task_accomplished: true, booking_price: cleaner_selma.user_price)
 
 puts "end booking and reviews"
 

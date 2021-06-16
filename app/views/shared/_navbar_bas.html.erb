@@ -39,19 +39,21 @@
   </div>
 
 
-<% unless  current_user.bookings.empty? %>
-  <% if controller_name == "chatrooms" && action_name == "show"%>
-      <div class= "nav-link-bas">
-        <%= link_to chatroom_path(current_user.bookings.last.chatroom)  do %>
-          <%= image_tag("chat-vert.png")%>
-        <% end %>
-      </div>
-  <% else %>
-      <div class= "nav-link-bas">
-        <%= link_to chatroom_path(current_user.bookings.last.chatroom) do %>
-          <%= image_tag("chat_gris.png")%>
-        <% end %>
-      </div>
-  <% end  %>
+<% if user_signed_in? %>
+  <% unless current_user.bookings.empty? %>
+      <% if controller_name == "chatrooms" && action_name == "show"%>
+          <div class= "nav-link-bas">
+            <%= link_to chatroom_path(current_user.bookings.last.chatroom)  do %>
+              <%= image_tag("chat-vert.png")%>
+            <% end %>
+          </div>
+      <% else %>
+          <div class= "nav-link-bas">
+            <%= link_to chatroom_path(current_user.bookings.last.chatroom) do %>
+              <%= image_tag("chat_gris.png")%>
+            <% end %>
+          </div>
+      <% end  %>
   <% end %>
+<% end %>
 </div>
