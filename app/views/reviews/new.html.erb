@@ -15,9 +15,14 @@
       </div>
       <%= f.input :content, label: "Commentaire",  input_html: { class: "form-champ" }, label_html: { class: "form-text" } %>
       <div class="container-center">
-      <%= f.submit "ENVOYER", class: "btn-green"%>
+      <%= f.submit "ENVOYER",id:'check-button', class: "btn-green"%>
       </div>
     <% end %>
   </div>
 </div>
+<button class="button">
+          <span class="submit">ENVOYER</span>
+          <span class="loading"><i class="fa fa-refresh"></i></span>
+          <span class="check"><i class="fa fa-check"></i></span></button>
+
 
