@@ -75,7 +75,7 @@
     <div class="ligne w-100"></div>
     <div class="cards-price-flex">
       <h3>Total</h3>
-      <% @total = @frais + @booking.display_price  %>
+      <% @total = (@frais*100 + @booking.computed_price)/100  %>
       <h3> <%= @total %> €</h3>
     </div>
   </div>

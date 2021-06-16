@@ -135,11 +135,17 @@
 </div>
 </div> -->
 <div class="container-center">
-<button class="button">
-  <span class="submit">PAYER</span>
-  <span class="loading"><i class="fa fa-refresh"></i></span>
-  <span class="check"><i class="fa fa-check"></i></span>
-</button>
+<button id="pay" class="btn btn-green">Pay</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @booking.checkout_session_id %>'
+          });
+        });
+     </script>
 </div>
 </div>
 </html>

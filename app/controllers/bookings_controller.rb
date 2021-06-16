@@ -28,6 +28,19 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
     #@dashboard = dashboard.new
+    session = Stripe::Checkout::Session.create({
+        payment_method_types: ['card'],
+        line_items: [{
+          name: @booking.slot.user.first_name,
+          amount: @booking.computed_price,
+          currency: 'eur',
+          quantity: 1
+        }],
+        success_url: dashboard_url,
+        cancel_url: dashboard_url
+      })
+      @booking.update(checkout_session_id: session.id)
+      redirect_to dashboard_path
   end
 
   def create
@@ -38,20 +51,9 @@ class BookingsController < ApplicationController
 
     @booking.user = current_user
     @booking.task_accomplished = false
+    @booking.booking_price_cents = @booking.computed_price
     if @booking.save
-      session = Stripe::Checkout::Session.create({
-        payment_method_types: ['card'],
-        line_items: [{
-          name: @booking.slot.user.first_name,
-          amount: @booking.computed_price,
-          currency: 'eur',
-          quantity: 1
-        }],
-        success_url: booking_url(@booking),
-        cancel_url: dashboard_url
-      })
-      @booking.update(checkout_session_id: session.id)
-      redirect_to new_booking_payment_path(@booking)
+      redirect_to booking_path(@booking)
 
     else
       render :new
