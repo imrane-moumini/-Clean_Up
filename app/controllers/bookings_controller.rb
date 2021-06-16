@@ -42,7 +42,7 @@ class BookingsController < ApplicationController
         cancel_url: dashboard_url
       })
       @booking.update(checkout_session_id: session.id)
-      redirect_to dashboard_path
+
   end
 
   def create
