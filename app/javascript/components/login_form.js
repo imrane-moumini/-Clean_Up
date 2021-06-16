@@ -2,16 +2,24 @@ const initLogin=() => {
 //anime.js library
 let drawer_open = false;
 
-document.querySelector(".cta-button").addEventListener("mouseup",function(){
-  cta_button_hide.play();
-})
+const ctaButton = document.querySelector(".cta-button");
 
-document.querySelector(".back-btn").addEventListener("mouseup",function(){
+if (ctaButton) {
+  ctaButton.addEventListener("mouseup",function(){
+    cta_button_hide.play();
+  })
+}
+
+const backBtn = document.querySelector(".back-btn");
+
+if (backBtn) {
+  backBtn.addEventListener("mouseup",function(){
   if(drawer_open) {
-  slidedown.play();
-  cta_button_show.play();
+    slidedown.play();
+    cta_button_show.play();
   }
 })
+}
 
 let cta_button_show = anime({
     targets: ['.cta-button','.cta-text'],

@@ -16,15 +16,14 @@
 
   <div class="cards-infos">
     <div class="cards-infos-left">
-      <div class="rating-infos">
-        <% @available_slot_one.user.reviews.each do |review| %>
-          <% review.rating.times do %>
+       <div class="rating">
+          <% @available_slot_one.user.average_rating.times do %>
             <i class="fas fa-star gray-star"></i>
           <%end%>
-          <% ( 5 - review.rating).times do %>
+          <% ( 5 - @available_slot_one.user.average_rating).times do %>
             <i class="far fa-star gray-star"></i>
           <%end%>
-        <%end%><p><%=@available_slot_one.user.number_of_reviews%> avis </p>
+        <p><%=@available_slot_one.user.number_of_reviews%> avis</p>
       </div>
       <h2><%=@available_slot_one.user.first_name%></h2>
       <div class="cards-infos-address">
@@ -61,12 +60,13 @@
     </div>
 
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <% @available_slot_one.user.bookings.each do |booking| %>
+      <%#= raise %>
+      <% @reviews.each do |review| %>
         <div class="cards-review">
-             <%= cl_image_tag booking.user.photo.key, class: "avatar" %>
+             <%= cl_image_tag review.booking.user.photo.key, class: "avatar" %>
             <div class="cards-review-content">
-              <h2><%= booking.user.first_name%></h2>
-              <p><%= booking.review.content%></p>
+              <h2><%= review.booking.user.first_name%></h2>
+              <p><%= review.content%></p>
             </div>
           </div>
       <% end %>
@@ -77,11 +77,14 @@
       <input name="booking[start_time]" value="<%= @start_query %>" class="d-none">
       <input name="booking[end_time]" value="<%= @end_query %>" class="d-none">
       <%= f.input :slot_id, input_html: { value: @available_slot_one.id, class: 'd-none' }, label: false %>
-      <%= f.submit "ACCEPTER", class: "btn-green" %>
+        <button class="button">
+          <span class="submit">CONFIRMER</span>
+          <span class="loading"><i class="fa fa-refresh"></i></span>
+          <span class="check"><i class="fa fa-check"></i></span>
+        </button>
     <% end %>
     <%= link_to 'REFUSER', new_booking_path(ville: @ville, start_time: @start_query, end_time: @end_query), class: "titleh3"%>
   <% end %>
-
   </div>
 </div>
 

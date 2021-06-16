@@ -15,30 +15,29 @@ user_alizée.photo.attach(io: file, filename: 'alizéeprofilepic.jpg', content_t
 user_alizée.save
 
 
-user_margaux = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Lille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2, description: "Bonjour je m'appelle Margaux, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 50, user_price: 10)
+user_margaux = User.create!(first_name: "Margaux", last_name: "Rouanet", email: "rouanetmargaux@gmail.com", password: "password2", address: "120 cours Lieutaud 13006 Marseille", degree: "Bac pro hygiène, propreté et stérilisation", years_of_experience: 2, description: "Bonjour je m'appelle Margaux, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 50, user_price: 10)
 file = URI.open('https://shayaridp.in/wp-content/uploads/2020/05/smile-girl-profile-picture-whatsapp-dp-images.jpg')
 user_margaux.photo.attach(io: file, filename: 'margauxpic.jpg', content_type: 'image/jpg')
 user_margaux.save
 
-user_imrane = User.create!(first_name: "Imrane", last_name: "Moumini", email: "ImraneMouminiPro@gmail.com", password: "password3", address: "5 rue Marengo 13006 Marseille", degree: "BTS métiers des services à l'environnement", years_of_experience: 4, description: "Bonjour je m'appelle Imrane, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 24, user_price: 10)
+user_imrane = User.create!(first_name: "Imrane", last_name: "Moumini", email: "ImraneMouminiPro@gmail.com", password: "password3", address: "5 rue Marengo 13006 Marseille", degree: "BTS métiers des services à l'environnement", years_of_experience: 4, description: "Bonjour je m'appelle Imrane, je suis à votre disposition, compétent et motivé! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 24, user_price: 10)
 file = URI.open('https://smoothmove.co.za/wp-content/uploads/2021/02/pp1.jpg')
 user_imrane.photo.attach(io: file, filename: 'imranepic.jpg', content_type: 'image/jpg')
 user_imrane.save
 
 
-cleaner_selma = User.create!(first_name: "Selma", last_name: "Benmeradi", email: "selma.benmeradi@gmail.com", password: "password4", address: "20 rue Bel Air 13006 Amiens", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 1, description: "Bonjour je m'appelle Selma, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 60, user_price: 10)
+cleaner_selma = User.create!(first_name: "Clara", last_name: "Ollier", email: "selma.benmeradi@gmail.com", password: "password4", address: "20 rue Bel Air 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 1, description: "Bonjour je m'appelle Selma, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 60, user_price: 10)
 file = URI.open('https://techtrickseo.com/wp-content/uploads/2019/11/asfDFHJDKFHDFJH.jpg')
 cleaner_selma.photo.attach(io: file, filename: 'selmapic.jpg', content_type: 'image/jpg')
 cleaner_selma.save
 
-cleaner_paul = User.create!(first_name: "Paul", last_name: "Duffour", email: "paul.duffour@gmail.com", password: "password5", address: "8 rue Bel Air 13006 Marseille", degree: "CAP agent de propreté et d'hygiène", years_of_experience: 4, description: "Bonjour je m'appelle Paul, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 45, user_price: 10)
+cleaner_paul = User.create!(first_name: "Paul", last_name: "Dufour", email: "paul.duffour@gmail.com", password: "password5", address: "8 rue Bel Air 13006 Marseille", degree: "CAP agent de propreté et d'hygiène", years_of_experience: 4, description: "Bonjour je m'appelle Paul, je suis à votre disposition, compétent et motivé! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 45, user_price: 10)
 file = URI.open('https://www.heysaturday.co/wp-content/uploads/2015/12/MG_0331cDigital.jpg')
 cleaner_paul.photo.attach(io: file, filename: 'paulpic.jpg', content_type: 'image/jpg')
 cleaner_paul.save
 
 
-
-cleaner_jean = User.create!(first_name: "Jean", last_name: "Loup", email: "jean.loup@gmail.com", password: "password6", address: "4 rue du Village 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 2, description: "Bonjour je m'appelle Jean, je suis à votre disposition, compétente et motivée! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 15, user_price: 10)
+cleaner_jean = User.create!(first_name: "Jean", last_name: "Loup", email: "jean.loup@gmail.com", password: "password6", address: "4 rue du Village 13006 Marseille", degree: "BEP en maintenance et hygiène des locaux", years_of_experience: 2, description: "Bonjour je m'appelle Jean, je suis à votre disposition, compétent et motivé! Je serais prendre soin de votre intérieur comme il se doit ! Vous pouvez me faire confiance. Le contact avec les clients et une des choses que je préfère.", number_of_reviews: 15, user_price: 10)
 file = URI.open('https://sm.askmen.com/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_gstt.jpg')
 cleaner_jean.photo.attach(io: file, filename: 'jeanpic.jpg', content_type: 'image/jpg')
 cleaner_jean.save
@@ -70,8 +69,14 @@ review1 = Review.create!(content: "#{booking1.slot.user.first_name} a fait du su
 booking2 = Booking.create!(user_id: user_margaux.id, slot_id: slot2.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_paul.user_price)
 review2 = Review.create!(content: "#{booking2.slot.user.first_name} m'a bien dépanné sur ce coup là, super taff!", rating: 5, booking_id: booking2.id)
 
+
+booking2b = Booking.create!(user_id: user_imrane.id, slot_id: slot2.id, start_time: start+ 2.hours , end_time: start + 3.hours, status: true, task_accomplished: false, booking_price: cleaner_paul.user_price)
+review2b = Review.create!(content: "#{booking2b.slot.user.first_name} m'a bien dépanné sur ce coup là, super taff!", rating: 2, booking: booking2b)
+
 booking3 = Booking.create!(user_id: user_imrane.id, slot_id: slot3.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_jean.user_price)
 review3 = Review.create!(content: "Encore un peu de poussière mais le gros du travail a été fait merci #{booking3.slot.user.first_name}", rating: 2, booking_id: booking3.id)
+
+booking_past = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start - 8.hours, end_time: start - 7.hours, status: true, task_accomplished: true, booking_price: cleaner_selma.user_price)
 
 puts "end booking and reviews"
 
@@ -87,7 +92,7 @@ puts "end booking and reviews"
 
 
 
-puts "begin charoom"
+puts "begin chatroom"
 
 chatroom1 = Chatroom.create(name: "general")
 
