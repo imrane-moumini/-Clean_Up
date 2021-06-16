@@ -16,15 +16,20 @@
 <body>
   <div class="booking-form">
     <%= form_tag new_booking_path, method: :get, :id => "home-search" do %>
+
               <%= text_field_tag :ville, nil,
               class: 'form-group',
-              placeholder: 'Ma ville' %>
-               <%= datetime_field_tag :start_time, nil,
+              placeholder: "Ma ville" %>
+
+
+              <%= datetime_field_tag :start_time, nil,
               class: 'form-group',
-              placeholder: "Début" %>
+              value: "Date de début" %>
+
                <%= datetime_field_tag :end_time, nil,
               class: 'form-group',
-              placeholder: 'Fin' %>
+              placeholder: 'Date de fin' %>
+
               <%= submit_tag 'TROUVER', class: 'btn btn-flat-find' %>
             <% end %>
   </div>

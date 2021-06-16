@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 
+
 <div class= "fas fa-arrow-left" >
   <% link_to root_path %>
 </div>
-<%= @booking.state %>
+
+
+ <%= link_to root_path, class: "fas fa-arrow-left" do %>
+  <% end %>
+
 <div class="container-center">
   <div class="top-title">
     <p>RÉCAPITULATIF</p>
@@ -18,14 +23,13 @@
   <div class="cards-recap-infos">
     <h2><%= @booking.slot.user.first_name %></h2>
       <div class="rating">
-        <% @booking.slot.user.reviews.each do |review| %>
-          <% review.rating.times do %>
+          <% @booking.slot.user.average_rating.times do %>
             <i class="fas fa-star gray-star"></i>
           <%end%>
-          <% ( 5 - review.rating).times do %>
+          <% ( 5 - @booking.slot.user.average_rating).times do %>
             <i class="far fa-star gray-star"></i>
           <%end%>
-        <%end%><p><%=@booking.slot.user.number_of_reviews%> avis</p>
+        <p><%=@booking.slot.user.number_of_reviews%> avis</p>
       </div>
   </div>
 </div>
@@ -84,7 +88,16 @@
 
 <div class="container-center">
 
-<button id="pay" class="btn btn-green">Payer</button>
+
+
+
+ <!-- <div class="container-center">
+  <span<%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>/span>
+</div>
+</div> -->
+<div class="container-center">
+<button id="pay" class="btn btn-green">Pay</button>
+
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
