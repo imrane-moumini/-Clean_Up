@@ -84,58 +84,7 @@
 
 <div class="container-center">
 
-
- <%= link_to 'PAYER', dashboard_path, class: "btn-green"%>
-  <%= link_to 'MODIFIER', root_path, class: "titleh3"  %>
-</div>
-
-<div class="toggle-pay">
-<div class="bottom-title">
-  <p>PAIEMENT</p>
-</div>
-
-<div class="champ-title">
-  <p>Nom de la carte</p>
-</div>
-
-<div class="champ-big">
-  <p><%=current_user.last_name%></p>
-</div>
-
-<div class="champ-title">
-  <p>Numéro de la carte</p>
-</div>
-
-<div class="champ-big">
-  <p>268492738927468</p>
-</div>
-
-
-<div class="container-flex">
-  <div class="hour-title1">
-    <p>Date d’expiration </p>
-  </div>
-  <div class="hour-title2">
-    <p>Cryptogramme</p>
-  </div>
-</div>
-
-
-<div class="container-flex">
-  <div class="champ-small">
-    <p>09/22</p>
-  </div>
-  <div class="champ-small">
-    <p>809</p>
-  </div>
-</div>
-
-<!-- <div class="container-center">
-  <span<%= link_to 'PAYER', dashboard_path, class: "btn-green"  %>/span>
-</div>
-</div> -->
-<div class="container-center">
-<button id="pay" class="btn btn-green">Pay</button>
+<button id="pay" class="btn btn-green">Payer</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -146,6 +95,7 @@
           });
         });
      </script>
+
+  <%= link_to 'MODIFIER', root_path, class: "titleh3"  %>
 </div>
-</div>
-</html>
+
