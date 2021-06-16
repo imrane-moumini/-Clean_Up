@@ -81,7 +81,7 @@ puts "begin booking and reviews"
 
 
 
-booking1 = Booking.create!(user_id: user_imrane.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price: cleaner_selma.user_price_cents)
+booking1 = Booking.create!(user_id: user_imrane.id, slot_id: slot1.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false, booking_price_cents: cleaner_selma.user_price_cents)
 review1 = Review.create!(content: "#{booking1.slot.user.first_name} a fait du super travail, merci encore!", rating: 4, booking_id: booking1.id)
 
 booking2 = Booking.create!(user_id: user_margaux.id, slot_id: slot2.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false)
@@ -90,7 +90,7 @@ review2 = Review.create!(content: "#{booking2.slot.user.first_name} m'a bien dé
 booking3 = Booking.create!(user_id: user_imrane.id, slot_id: slot3.id, start_time: start, end_time: start + 1.hours, status: true, task_accomplished: false)
 review3 = Review.create!(content: "Encore un peu de poussière mais le gros du travail a été fait merci #{booking3.slot.user.first_name}", rating: 2, booking_id: booking3.id)
 
-booking_past = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start - 1.days, end_time: start - 1.days + 1.hours, status: true, task_accomplished: true, booking_price: cleaner_selma.user_price_cents)
+booking_past = Booking.create!(user_id: user_alizée.id, slot_id: slot1.id, start_time: start - 1.days, end_time: start - 1.days + 1.hours, status: true, task_accomplished: true, booking_price_cents: cleaner_selma.user_price_cents)
 
 puts "end booking and reviews"
 
