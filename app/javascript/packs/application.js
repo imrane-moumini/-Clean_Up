@@ -39,10 +39,12 @@ document.addEventListener('turbolinks:load', () => {
   initToggle();
   initButton();
 
-  initLogin ();
+  // initLogin ();
   initChatroomCable();
   dynamicRating();
 });
+
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';

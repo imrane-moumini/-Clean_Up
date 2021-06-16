@@ -21,12 +21,14 @@ class BookingsController < ApplicationController
     end
 
     @available_slot_one = @available_slots.sample
-
+    @reviews = []
+    Review.all.map { |review| @reviews << review if review.booking.slot.user_id == @available_slot_one.user.id }
   end
 
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
+    @reviews = Review.all
     #@dashboard = dashboard.new
     session = Stripe::Checkout::Session.create({
         payment_method_types: ['card'],
@@ -64,7 +66,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to dashboard_path, notice: 'This booking was successfully destroyed.'
+    redirect_to dashboard_path, notice: 'Votre réservation a bien été annulée.'
     authorize @booking
 
   end
