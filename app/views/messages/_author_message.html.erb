@@ -1,0 +1,10 @@
+
+        <div class="current_user">
+          <div class="message-container-user" id="message-<%= message.id %>">
+            <p class="author-user">
+              <span><%= message.user.first_name %> <%=message.user.last_name %></span>
+              <small class= "date-user"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+            </p>
+            <p class= "p-user"><%= message.content %></p>
+          </div>
+        </div>

@@ -1,24 +1,53 @@
-<div class="container">
 
+ <%= link_to dashboard_path, class: "fas fa-arrow-left" do %>
+  <% end %>
+
+
+<div class="container-1">
+
+<div class= "logo-2"><%= image_tag("Logo_rond_blanc.png") %></div>
+<div class="title-chat"><h1>Votre messagerie</h1></div>
+<div class= "title-chat"><h2>Discuter avec <%= @chatroom.booking.slot.user.first_name %></h2></div>
+
+
+<div class="container-white-chat">
 
   <h1><%= @chatroom.name %></h1>
   <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-    <% @chatroom.messages.each do |message| %>
-      <div class="message-container" id="message-<%= message.id %>">
-        <i class="author">
-          <span><%= message.user.first_name %></span>
-          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-        </i>
-        <p><%= message.content %></p>
-        <% if policy(message).destroy? %>
-        <small> <%= link_to 'supprimer le message',  chatroom_message_path(message), method: :delete, data: { confirm: 'êtes vous sûr ?'} %></small>
+      <% @chatroom.messages.each do |message| %>
+      <% if message.user == current_user %>
+        <div class="current_user">
+          <div class="message-container-user" id="message-<%= message.id %>">
+            <p class="author-user">
+              <span><%= message.user.first_name %> <%=message.user.last_name %></span>
+              <small class= "date-user"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+            </p>
+            <p class= "p-user"><%= message.content %></p>
+          </div>
+        </div>
+        <% else %>
+          <div class="cleaner">
+            <div class="message-container" id="message-<%= message.id %>">
+              <p class="author-cleaner">
+                <span><%= message.user.first_name %> <%= message.user.last_name %></span>
+                <small class= "date-cleaner"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+              </p>
+              <p class="p-cleaner"><%= message.content %></p>
+            </div>
+          </div>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
   </div>
 
-  <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-    <%= f.input :content, label: false, placeholder: "Ecrivez votre message" %>
-     <%= f.submit %>
-  <% end %>
+
+    <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+      <div class="bas">
+        <%= f.input :content, label: false, placeholder: "Ecrivez votre message", label_html: { class: "form-text" } %>
+          <div class="container-center">
+          <%= f.submit "ENVOYER", class: "btn-green-small"%>
+          </div>
+        <% end %>
+      </div>
 </div>
+</div>
+

@@ -1,5 +1,5 @@
 <div class="container-1">
-  <div class= "logo"><%= image_tag("Logo_rond_blanc.png") %></div>
+  <div class= "logo-1"><%= image_tag("Logo_rond_blanc.png") %></div>
   <div name-logo> <h1>CLEAN UP</h1></div>
   <div class="container-white">
     <div class="trait-1"></div>
@@ -15,9 +15,14 @@
       </div>
       <%= f.input :content, label: "Commentaire",  input_html: { class: "form-champ" }, label_html: { class: "form-text" } %>
       <div class="container-center">
-      <%= f.submit "ENVOYER", class: "btn-green"%>
+      <%= f.submit "ENVOYER",id:'check-button', class: "btn-green"%>
       </div>
     <% end %>
   </div>
 </div>
+<button class="button">
+          <span class="submit">ENVOYER</span>
+          <span class="loading"><i class="fa fa-refresh"></i></span>
+          <span class="check"><i class="fa fa-check"></i></span></button>
+
 
