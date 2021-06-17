@@ -22,7 +22,7 @@
             <div class= "green">
               <h3><%= booking.start_time.strftime("%b")%>  <br> <%= booking.start_time.strftime("%d")%>  </h3>
             </div>
-            <div class="card-dash-infos-green">
+            <div class="card-expe-infos-green">
               <h2> <%= booking.slot.user.first_name%> <%= booking.slot.user.last_name%></h2>
               <p>De <%= booking.start_time.strftime("%H:00") %> à <%= booking.end_time.strftime("%H:00") %> <br> <%= booking.slot.user.address %></p>
             </div>
