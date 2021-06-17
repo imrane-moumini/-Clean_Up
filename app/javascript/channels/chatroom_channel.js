@@ -7,7 +7,14 @@ const initChatroomCable = () => {
 
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
-        messagesContainer.insertAdjacentHTML('beforeend', data); // called when data is broadcast in the cable
+        const authorId = Number(data.author_id)
+        const currentUserId = Number(document.querySelector("body").dataset.userId)
+
+        const messageContent = authorId === currentUserId ? data.author_message : data.recipient_message
+
+        messagesContainer.insertAdjacentHTML('beforeend', messageContent);
+
+        window.scrollTo(0, document.body.scrollHeight);// called when data is broadcast in the cable
       },
     });
   }

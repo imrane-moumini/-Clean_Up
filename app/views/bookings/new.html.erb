@@ -49,13 +49,23 @@
     </div>
 
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-      <div class="bloc-experience">
-          <h3>Qualification</h3>
-        <p> <%= @available_slot_one.user.degree %> </p>
+      <div class="card-dash">
+        <div class= "green">
+          <%= image_tag "qualification.png", alt: "perso", class: "img-icone"%>
+        </div>
+        <div class="card-expe-infos-green">
+          <h2> Qualification</h2>
+          <p><%= @available_slot_one.user.degree %></p>
+        </div>
       </div>
-      <div class="bloc-experience">
-        <h3>Expérience</h3>
-        <p> <%= @available_slot_one.user.years_of_experience %> ans </p>
+      <div class="card-dash">
+        <div class= "green">
+          <%= image_tag "experience.png", alt: "perso", class: "img-icone" %>
+        </div>
+        <div class="card-expe-infos-green">
+          <h2>Expérience</h2>
+          <p><%= @available_slot_one.user.years_of_experience %> ans </p>
+        </div>
       </div>
     </div>
 

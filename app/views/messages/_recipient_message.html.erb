@@ -1,0 +1,9 @@
+<div class="cleaner">
+            <div class="message-container" id="message-<%= message.id %>">
+              <p class="author-cleaner">
+                <span><%= message.user.first_name %> <%= message.user.last_name %></span>
+                <small class= "date-cleaner"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+              </p>
+              <p class="p-cleaner"><%= message.content %></p>
+            </div>
+          </div>
