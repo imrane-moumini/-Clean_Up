@@ -1,37 +1,34 @@
 .logo-2 img {
- width: 80px;
+  width: 80px;
   height: 80px;
-  position: absolute;
-  top: 25px;
-  right: 250px;
 }
 
-.title-chat h2{
-  position: absolute;
-  top: 31px;
-  right: 87px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 18px;
-  line-height: 21px;
-  color: white;
-}
+// .title-chat h2{
+//   position: absolute;
+//   top: 31px;
+//   right: 87px;
+//   font-family: Roboto;
+//   font-style: normal;
+//   font-weight: lighter;
+//   font-size: 18px;
+//   line-height: 21px;
+//   color: white;
+// }
 
-.title-chat h1{
-  position: absolute;
-  top: 40px;
-  right: 29px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 21px;
-  color: white;
-}
+// .title-chat h1{
+//   position: absolute;
+//   top: 40px;
+//   right: 29px;
+//   font-family: Roboto;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 22px;
+//   line-height: 21px;
+//   color: white;
+// }
 
 .container-white-chat{
-  width: 375px;
+  width: 100vw;
   height: 505px;
   left: 0px;
   background: #FFFFFF;
@@ -82,7 +79,6 @@
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 14px;
   color: #5E616F;
   margin-bottom: 16px;
   margin-top: 16px;
@@ -97,8 +93,9 @@
   letter-spacing: 0.1em;
   color: #5E616F;
   position: absolute;
-  top: 100px;
+  bottom: -18px;
   left: 0px;
+  top: unset;
 }
 
 .message-container-user{
@@ -124,7 +121,6 @@
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
-  line-height: 14px;
   color: white;
   margin-bottom: 16px;
 }
@@ -138,8 +134,9 @@
   letter-spacing: 0.1em;
   color: #5E616F;
   position: absolute;
-  top: 100px;
+  bottom: -18px;
   right: 0px;
+  top: unset;
 }
 
 .fa-trash-alt{
@@ -174,6 +171,43 @@
     margin: 0;
     padding-bottom: 5px;
     padding-top: 5px;
+    line-height: unset;
 }
 
+.haut{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  .logo-2 {
+    width: 80px;
+    height: 80px;
+  }
+  .title-chat {
+    height: 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    h1 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      margin: 0;
+      line-height: 21px;
+      color: white;
+      position: unset;
+    }
+    h2 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: lighter;
+      font-size: 18px;
+      line-height: 21px;
+      color: white;
+      margin: 0;
+    }
+  }
+}
 

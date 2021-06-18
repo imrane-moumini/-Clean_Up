@@ -1,5 +1,5 @@
 .block-vert {
-  width: 390px;
+  width: 100vw;
   height: 50px;
   background: #15D39C;
 }
@@ -18,7 +18,7 @@
   margin-left: 10px;
 }
 .img-perso {
-  width: 389px;
+  width: 100vw;
   height: 272px;
   margin-top: -2px;
 }
@@ -103,6 +103,10 @@ form>input {
 
 .submit-button {
   display: block;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: 'roboto';
   font-weight: 600;
   text-transform: uppercase;
@@ -119,8 +123,6 @@ form>input {
   cursor: pointer;
   transition: all .3s ease;
   font-weight: bold;
-  margin-left: 62px;
-  margin-top: -64px;
 
   &.animated {
     animation: .75s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;

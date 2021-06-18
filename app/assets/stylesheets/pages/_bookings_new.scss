@@ -1,7 +1,8 @@
 .card-img{
   filter: blur(4px);
-  width: 375px;
+  width: 100vw;
   height: 268px;
+  object-fit: cover;
 }
 
 .titleh3 {
@@ -17,12 +18,13 @@
 
 .flex{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-large{
   position: absolute;
-  left: 120px;
-  top: 80px;
 }
 
 .btn-green{
