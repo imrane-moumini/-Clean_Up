@@ -2,14 +2,14 @@
   justify-content: space-between;
   background-color: transparent;
   position: relative;
-  width: 375px;
+  width: 100vwpx;
   z-index:100;
   margin-bottom: -50px;
   // pointer-events: none;
 }
 
 .navbar-lewagon .navbar-collapse {
-  width: 375px;
+  width: 100vw;
   height: 812px;
   background-color: white;
 }

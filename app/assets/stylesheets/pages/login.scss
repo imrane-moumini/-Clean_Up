@@ -106,7 +106,7 @@ h6 span{
   transition: all 600ms ease-out;
 }
 .card-front, .card-back {
-  width: 375px;
+  width: 100vw;
   height: 467px;
   background-color: white;
   background-position: bottom center;
@@ -120,6 +120,7 @@ h6 span{
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   z-index: 100;
+  right: -11px;
 }
 .card-back {
   transform: rotateY(180deg);
